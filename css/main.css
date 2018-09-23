@@ -3,6 +3,13 @@
 @import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
 
 /*メイン*/
+#top{
+  /*width: 100%;*/
+  height: 480px;
+  background-color: #29ad95;
+  text-align: center;
+  top: 20%;
+}
 .topcntnts{
   color:#fff;
   font-size: 60px;
@@ -18,6 +25,12 @@
 }
 
 @media screen and (max-width: 860px) {
+  #top{
+    height: 120px;
+    background-color: #29ad95;
+    text-align: center;
+    top: 20%;
+  }
   .topcntnts img{
     width:80px;
     border-radius: 60px;
