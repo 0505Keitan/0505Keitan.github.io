@@ -1,3 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
 @import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+
+/*メイン*/
+.topcntnts{
+  color:#fff;
+  font-size: 60px;
+  font-family: "Abel";
+  padding-top: 160px;
+}
+.topcntnts img{
+  border-radius: 80px;
+ -moz-border-image: border-radius: 80px;
+ -webkit-border-image: border-radius: 80px;
+ width: 160px;
+ border: solid #fff;
+}
+
+@media screen and (max-width: 860px) {
+  .topcntnts img{
+    width:80px;
+    border-radius: 60px;
+  }
+  .topcntnts{
+    padding-top: 20px;
+  }
+  .topcntnts p{
+    display: none;
+  }
+}
