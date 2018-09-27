@@ -39,6 +39,52 @@
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
     border-bottom: none;
 }
+/*作品*/
+.block{
+  margin: 0;
+  padding: 0;
+}
+
+.project{
+  transition: all .3s;
+  list-style: none;
+  background-color: #fff;
+  width: 280px;
+  height: auto;
+  flex-wrap:wrap;
+  border-radius: 8px;
+  box-shadow: 0 2px 3px 0 #bbb;
+  margin: 0 20px 20px 0;
+  float: left;
+  position: relative;
+}
+.project:hover{
+  margin-top:-8px;
+}
+.project-title{
+  color: #555;
+  font-size: 24px;
+  font-family: "Noto Sans Japanese";
+}
+.tag{
+  color: #777;
+  background: linear-gradient(transparent 70%, #fffd80 80%);
+  font-size: 16px;
+}
+.contents{
+  padding: 20px;
+}
+.setsumei{
+font-size: 16px;
+font-weight: 400;
+color: #242424;
+}
+.contents img{
+  object-fit: cover;
+  width:240px;
+  height:240px;
+  object-position: 0 0;
+}
 
 
 @media screen and (max-width: 860px) {
