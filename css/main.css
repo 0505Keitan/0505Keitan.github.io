@@ -23,23 +23,23 @@
  width: 160px;
  border: solid #fff;
 }
-	#sp{
-		display:inline-block;
-		margin:0 auto;
-		color:#6060AA;
-		background-color:rgba(0,0,0,0);
-		border:0.15em solid #6060FF;
-		border-radius:0.3em;
-		transition:all 0.3s;
-		box-sizing:border-box;
-		width:8em; height:3em;
-		line-height:2.7em;
-		cursor:pointer;
-		box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
-	}
-	#sp:hover{
-		box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
-	}
+#sp{
+	display:inline-block;
+	margin:0 auto;
+	color:#6060AA;
+	background-color:rgba(0,0,0,0);
+	border:0.15em solid #6060FF;
+	border-radius:0.3em;
+	transition:all 0.3s;
+	box-sizing:border-box;
+	width:8em; height:3em;
+	line-height:2.7em;
+	cursor:pointer;
+	box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
+}
+#sp:hover{
+	box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
+}
 
 @media screen and (max-width: 860px) {
   #top{
