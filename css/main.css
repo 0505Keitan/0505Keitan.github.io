@@ -23,23 +23,23 @@
  width: 160px;
  border: solid #fff;
 }
-#sp{
-	display:inline-block;
-	margin:0 auto;
-	color:#6060AA;
-	background-color:rgba(0,0,0,0);
-	border:0.15em solid #6060FF;
-	border-radius:0.3em;
-	transition:all 0.3s;
-	box-sizing:border-box;
-	width:8em; height:3em;
-	line-height:2.7em;
-	cursor:pointer;
-	box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
+.square_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
 }
-#sp:hover{
-	box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
+.square_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
 }
+
 
 @media screen and (max-width: 860px) {
   #top{
