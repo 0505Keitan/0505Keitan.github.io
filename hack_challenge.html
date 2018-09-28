@@ -14,12 +14,15 @@
 <script type="text/javascript">
 function sub(){
   var pasu = 'password';
+  var usea = 'admin';
     var pw;
+  var us;
     pw = document.getElementById('pass').value;
-  if(pw != pasu){
-    alert("パスワードが違います");
+  us = document.getElementById('user').value;
+  if(pw != pasu && us != usea){
+    alert("ユーザー名かパスワードが違います");
   }else{
-    alert("認証をクリアしました");
+    alert("クリアおめでとう！簡単すぎたね....");
     //location.href=pw + ".html";
   }
 }
@@ -27,7 +30,8 @@ function sub(){
   </head>
 <body>
   <div align="center">
-  <input id="pass" size="12" maxlength="30" value="" type="password">
+    <input id="user" size="12" maxlength="30" value="ユーザー名" type="text">
+  <input id="pass" size="12" maxlength="30" value="パスワード" type="password">
   <input type="button" value="ログイン" onclick="sub();">
 </body>
 </html>
