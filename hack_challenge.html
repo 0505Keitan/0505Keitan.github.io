@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>0505Keitan</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="https://0505keitan.github.io/images/0505Keitan.png">
+    <title>工事中</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="https://keitan.t-server.tk/Documents/pass.php")></script>
+<script type="text/javascript">
+function sub(){
+    var pw;
+    pw = document.getElementById('pass').value;
+  if(pw != password){
+    alert("パスワードが違います");
+  }else{
+    alert("認証をクリアしました");
+    //location.href=pw + ".html";
+  }
+}
+</script>
+  </head>
+<body>
+  <div align="center">
+  <input id="pass" size="12" maxlength="30" value="" type="password">
+  <input type="button" value="ログイン" onclick="sub();">
+</body>
+</html>
