@@ -1,4 +1,4 @@
-$(function(){
+function getDelay(){
 
 //JSONデータ
 var data = {"release": [
