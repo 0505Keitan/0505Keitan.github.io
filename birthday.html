@@ -1,0 +1,115 @@
+<style type=”text/css”>
+.timer{
+text-align:center;  
+        width:500px;  
+        margin:30px auto 0;  
+        padding:10px 0;  
+        font-size:1.5em;  
+        color:#fff;  
+        text-shadow:1px 1px 1px #ccc;  
+        font-weight:700;  
+        line-height:40px;  
+        border:1px solid #ef007c;  
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #ef007c), color-stop(0.00, #ff5db1));  
+        background: -webkit-linear-gradient(top, #ff5db1 0%, #ef007c 100%);  
+        background: -moz-linear-gradient(top, #ff5db1 0%, #ef007c 100%);  
+        background: -o-linear-gradient(top, #ff5db1 0%, #ef007c 100%);  
+        background: -ms-linear-gradient(top, #ff5db1 0%, #ef007c 100%);  
+        background: linear-gradient(top, #ff5db1 0%, #ef007c 100%);  
+        shadow: 2px 2px 16px 7px #ddd, inset 0px 0px 1px 1px #f5add2; /* Safari, Chrome用 */    
+        -moz-box-shadow: 2px 2px 16px 7px #ddd, inset 0px 0px 1px 1px #f5add2; /* Firefox用 */    
+        box-shadow: 2px 2px 16px 7px #ddd, inset 0px 0px 1px 1px #f5add2; /* CSS3 */    
+    }  
+    </style>
+   
+   <script type="text/javascript">  
+    <!-- start of JavaScript  
+    function CountdownTimer( elemID, timeLimit, limitMessage, msgClass ) {  
+        this.initialize.apply( this, arguments );  
+    }  
+      
+    CountdownTimer.prototype =  {  
+      
+        /** 
+         * Constructor 
+         */  
+        initialize: function( elemID, timeLimit, limitMessage, msgClass ) {  
+            this.elem = document.getElementById( elemID );  
+            this.timeLimit = timeLimit;  
+            this.limitMessage = limitMessage;  
+            this.msgClass = msgClass;  
+        },  
+      
+        /** 
+         * カウントダウン 
+         */  
+        countDown : function()  {  
+            var timer;  
+            var today = new Date()  
+            var days = Math.floor( ( this.timeLimit - today ) / ( 24 * 60 * 60 * 1000 ) );  
+            var hours = Math.floor( ( ( this.timeLimit - today ) % ( 24 * 60 * 60 * 1000 ) ) / ( 60 * 60 * 1000 ) );  
+            var mins = Math.floor( ( ( this.timeLimit - today ) % ( 24 * 60 * 60 * 1000 ) ) / ( 60 * 1000 ) ) % 60;  
+            var secs = Math.floor( ( ( this.timeLimit - today ) % ( 24 * 60 * 60 * 1000 ) ) / 1000 ) % 60 % 60;  
+            var milis = Math.floor( ( ( this.timeLimit - today ) % ( 24 * 60 * 60 * 1000 ) ) / 10 ) % 100;  
+            var me = this;  
+      
+                if( ( this.timeLimit - today ) > 0 ){  
+                timer = days + '日' + this.addZero( hours ) + '時間' + this.addZero( mins ) + '分'+ this.addZero( secs ) + '秒'  + this.addZero( milis ) + ' です。'  
+                this.elem.innerHTML = timer;  
+                tid = setTimeout( function() { me.countDown(); }, 10 );  
+      
+                }else{  
+                this.elem.innerHTML = this.limitMessage;  
+                if( this.msgClass ) {  
+                    this.elem.setAttribute( 'class', this.msgClass );  
+                }  
+                return;  
+                }  
+        },  
+      
+        /** 
+         * ゼロを付与 
+         */  
+        addZero : function( num )   {  
+            num = '00' + num;  
+            str = num.substring( num.length - 2, num.length );  
+      
+            return str ;  
+        }  
+    }  
+      
+    // end of JavaScript -->  
+    </script
+    <div class="timer">  
+<div class="timer_1" id="sampleA"></div>  
+<script language="JavaScript" type="text/javascript">  
+<!--  
+cdTimer1();  
+  
+function cdTimer1() {  
+  
+// 設定項目 ここから---------------------------------------------  
+    // タグ要素のID名  
+    var elemID = 'sampleA';  
+  
+    // 期限日を設定  
+    var year    =   2012;           // 年  
+    var month   =   4;              // 月  
+    var day     =   27;             // 日  
+  
+    // 期限終了後のメッセージ  
+    var limitMessage    =   'また来年';  
+  
+    // メッセージのスタイルクラス名（変更しない場合は空欄）  
+    var msgClass = 'msg_1';  
+// 設定項目 ここまで---------------------------------------------  
+  
+  
+    var timeLimit = new Date( year, month - 1, day );  
+    var timer = new CountdownTimer( elemID, timeLimit, limitMessage, msgClass );  
+    timer.countDown();  
+}  
+  
+// -->  
+</script>  
+</div>
