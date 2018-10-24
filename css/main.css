@@ -10,6 +10,9 @@
   text-align: center;
   top: 20%;
 }
+#back{
+  background-color: #e9ffe0;
+}
 .topcntnts{
   color:#fff;
   font-size: 60px;
