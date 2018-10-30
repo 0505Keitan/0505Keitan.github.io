@@ -26,6 +26,21 @@
     <h1>工事中</h1>
     <br>
     <a href="https://keitan.t-server.tk/sp/" class="square_btn">SpeedTest</a>
+    <div class="box">
+    <p>支援お願いします！(現在Kyashのみ対応です)</p>
+    <form name="form1" action="">
+    <select id="Select1" onchange="selectboxChange();">
+      <option selected>選択してください</option>
+      <option disabled>--Kyash--</option>
+      <option>¥1</option>
+      <option>¥10</option>
+      <option>¥100</option>
+      <option>¥200</option>
+      <option>¥300</option>
+    </select>
+  </form>
+  <div id="output"></div>    
+  </div>
     <br>
     <p>文字数カウンター</p>
     <textarea cols="50" rows="10" onKeyUp="countLength(value, 'textlength2');"></textarea>
