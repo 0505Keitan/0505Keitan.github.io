@@ -24,5 +24,10 @@ function selectboxChange() {
         case 6:
           target.innerHTML = "<a href='https://kyash.me/payments/GGcK3q85UYuH4RlQNPHAdj12kQeY' class='square_btn2'>¥300を支援</a>";
           break;
+        case 7:
+          break;
+          case 8:
+          target.innerHTML = "<a href='https://polca.jp/projects/nuYySE8yh4H' class='square_btn2'>¥300~を支援</a>";
+          break;
       }
     }
