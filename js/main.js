@@ -29,5 +29,19 @@ function selectboxChange() {
           case 8:
           target.innerHTML = "<a href='https://polca.jp/projects/nuYySE8yh4H' class='square_btn2'>¥300~を支援</a>";
           break;
+          case 9:
+          break;
+          case 10:
+          target.innerHTML = "<a href='http://amzn.asia/beszOLZ' class='square_btn2'>Amazonへ移動</a>";
+          break;
+          case 11:
+          target.innerHTML = "<a href='http://amzn.asia/8DAetQz' class='square_btn2'>Amazonへ移動</a>";
+          break;
+          case 12:
+          target.innerHTML = "<a href='http://amzn.asia/9CcBKeG' class='square_btn2'>Amazonへ移動</a>";
+          break;
+          case 13:
+          target.innerHTML = "<a href='http://amzn.asia/1mDzmZP' class='square_btn2'>Amazonへ移動</a>";
+          break;
       }
     }
