@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
 function countLength( text, field ) {
   document.getElementById(field).innerHTML = text.length + "文字";
 }
@@ -44,4 +45,11 @@ function selectboxChange() {
           target.innerHTML = "<a href='http://amzn.asia/1mDzmZP' class='square_btn2'>Amazonへ移動</a>";
           break;
       }
+    }
+    
+function ss() {
+    gtag('event', 'download', {
+        'event_category': 'カテゴリ',
+        'event_label': 'ラベル'
+        })
     }
