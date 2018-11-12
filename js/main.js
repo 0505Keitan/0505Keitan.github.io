@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
+/* どうしてもうまくいかないので一旦削除
 function ShowLength( str ) {
    document.getElementById("inputlength").innerHTML = str.length + "文字";
 }
+*/
 
 function selectboxChange() {
       target = document.getElementById("output");
