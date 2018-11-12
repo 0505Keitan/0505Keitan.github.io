@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 function countLength( text, field ) {
-  document.getElementById(field).innerHTML = text.length + "文字";
+  document.getElementById(field).innerHTML = text.length2 + "文字";
 }
 
 function selectboxChange() {
