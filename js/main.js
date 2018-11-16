@@ -5,8 +5,8 @@ function ShowLength( str ) {
 }
 */
 
-function selectboxChange() {
-      target = document.getElementById("output");
+function ch() {
+      var target = document.getElementById("money");
 
       selindex = document.form1.Select1.selectedIndex;
       switch (selindex) {
@@ -47,11 +47,4 @@ function selectboxChange() {
           target.innerHTML = "<a href='http://amzn.asia/1mDzmZP' class='square_btn2'>Amazonへ移動</a>";
           break;
       }
-    }
-    
-function ss() {
-    gtag('event', 'download', {
-        'event_category': 'カテゴリ',
-        'event_label': 'ラベル'
-        })
     }
