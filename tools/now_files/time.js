@@ -17,7 +17,7 @@ function getPost() {
 	var hour = now.getHours();
 	var min = now.getMinutes();
 	var sec = now.getSeconds();
-	window.open('https://twitter.com/share?url=https://0505Keitan.github.io/tools/nowtime.html&text=今は' + year + '年' + mon + '月' + day + '日' + hour + '時' + min + '分' + sec + '秒です！- #nowTime', '_blank', 'width=450,height=500');
+	window.open('https://twitter.com/share?url=https://0505Keitan.github.io/tools/nowtime.html&hashtag=nowTime&text=今は' + year + '年' + mon + '月' + day + '日' + hour + '時' + min + '分' + sec + '秒です！', '_blank', 'width=450,height=500');
 }
 
 function getyear() {
