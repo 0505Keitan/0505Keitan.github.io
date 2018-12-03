@@ -20,4 +20,5 @@
 
 
 > ## 関連リンク
-[ナポアンのブログ](https://napoan.com)
+[ナポアンドットコム](https://napoan.com)
+[ナポアンツイッター](https://twitter.com/2687e8)
