@@ -3,11 +3,31 @@
 <meta charset="utf-8">
 <title>This Year</title>
 <script>
+
+
+
+
+timerID = setInterval('clock()',10000000); //10000秒毎にclock()を実行
+ 
+function clock() {	document.getElementById("view_now").innerHTML = now();
+}
+ 
+function now() {
+	var nowa = new Date();
+	var year = now.getFullYear();
+
 var now = 344;
 var max = 365;
 result = now / max * 100;
+	return result;
+}
+
+
 </head>
 </body>
+<center>
+<h1><div id="view_now"></div></h1>
 <progress value="344" max="365"></progress>
+</center>
 </body>
 </html>
