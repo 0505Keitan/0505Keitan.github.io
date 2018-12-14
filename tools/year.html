@@ -14,7 +14,7 @@ function clock() {	document.getElementById("view_now").innerHTML = now();
  
 function now() {
 	var nowa = new Date();
-	var year = now.getFullYear();
+	var year = nowa.getFullYear();
 
 var now = 344;
 var max = 365;
@@ -26,7 +26,7 @@ result = now / max * 100;
 </head>
 <body>
 <center>
-<div id="view_now"></div>
+<span id="view_now"></span>
 <progress value="344" max="365"></progress>
 </center>
 </body>
