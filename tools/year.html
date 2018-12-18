@@ -2,32 +2,19 @@
 <head>
 <meta charset="utf-8">
 <title>This Year</title>
-<script>
-
-
-
-
-timerID = setInterval('clock()',10000000); //10000秒毎にclock()を実行
- 
-function clock() {	document.getElementById("view_now").innerHTML = now();
-}
- 
-function now() {
-	var nowa = new Date();
-	var year = nowa.getFullYear();
-
-var now = 344;
-var max = 365;
-result = now / max * 100;
-	return result;
-}
-
-</script>
+<script src="./year_files/year.js"></script>
+<link rel="stylesheet" type="text/css" href="./year_files/year.css">
 </head>
 <body>
-<center>
-<span id="view_now"></span>
-<progress value="344" max="365"></progress>
-</center>
+<div align="center">
+<span id="years"></span>年は<span id="view"></span>%終了しました。<br>
+<br>
+<progress id="prog" max="365"></progress>
+<br />
+<br />
+<br />
+<br />
+<a href="#" onClick="getPost();" class="post_btn">ツイート</a>
+</div>
 </body>
 </html>
