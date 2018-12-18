@@ -25,5 +25,5 @@ function getPost() {
 	var max = 365;
 	var math = now / max * 100;
 	var result = Math.floor( math ) ;
-	window.open("https://twitter.com/share?url=https://0505Keitan.github.io/tools/year.html&hashtag=YearComplete&text=" + year + "年は" + result + "%終了しました。", "_blank", "width=450,height=500");
+	window.open("https://twitter.com/share?url=https://0505Keitan.github.io/tools/year.html&hashtags=YearComplete&text=" + year + "年は" + result + "%終了しました。", "_blank", "width=450,height=500");
 }
