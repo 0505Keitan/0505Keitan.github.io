@@ -2,6 +2,14 @@ body {
 	font-size: 50px;
 }
 
+.hey {
+	font-size: 30px;
+}
+
+.firefox {
+	font-size: 25px;
+}
+
 .post_btn {
     display: inline-block;
     padding: 4.8px 16px;
