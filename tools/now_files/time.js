@@ -7,6 +7,8 @@ function clock() {
 	document.getElementById("view_hour").innerHTML = geth();
 	document.getElementById("view_min").innerHTML = getmin();
 	document.getElementById("view_sec").innerHTML = getsec();
+	document.getElementById("view_pm").innerHTML = postMin();
+	document.getElementById("view_ps").innerHTML = postSec();
 }
 
 function getPost() {
@@ -18,6 +20,24 @@ function getPost() {
 	var min = now.getMinutes();
 	var sec = now.getSeconds();
 	window.open('https://twitter.com/share?url=https://0505Keitan.github.io/tools/nowtime.html&hashtags=nowTime&text=今は' + year + '年' + mon + '月' + day + '日' + hour + '時' + min + '分' + sec + '秒です！', '_blank', 'width=450,height=500');
+}
+
+function postIma() {
+var now = new Date();
+    //カウントダウンしたい日を設定
+    var anyDate = new Date("2018/12/31 23:59:59");
+    //日数を計算
+    var ms = anyDate - now;
+        //時間を取得
+        var ha = Math.floor(ms / 3600000);
+        var haa = ha % 24;
+        //分を取得
+        var ma = Math.floor((ms - ha * 3600000) / 60000);
+        //秒を取得
+        var sa = Math.round((ms - ha * 3600000 - ma * 60000) / 1000);
+ 
+        
+	window.open('https://twitter.com/share?url=https://0505Keitan.github.io/tools/nowtime.html&hashtags=nowTime&text=2018年はあと' + haa + '時間' + ma + '分' + sa + '秒', '_blank', 'width=450,height=500');
 }
 
 function getyear() {
@@ -62,20 +82,42 @@ function getsec() {
 	return s;
 }
 
+// ここからカウントダウン
 
-
-/*
-function linktwi() {
-		var now = new Date();
-	var year = now.getFullYear();
-	var mon = now.getMonth()+1; //１を足すこと
-	var day = now.getDate();
-	var hour = now.getHours();
-	var min = now.getMinutes();
-	var sec = now.getSeconds();
-	location.href='https://twitter.com/intent/tweet?url=https://0505Keitan.github.io&text=%e4%bb%8a%e3%81%af' + year + '%e5%b9%b4AA%e6%9c%88AA%e6%97%a5AA%e6%99%82AA%e5%88%86AA%e7%a7%92%e3%81%a7%e3%81%99%ef%bc%81%2d%20%23nowTime
-';
-var twi = document.getElementById('twi');
-twi.innerHTML = '<a href="https://twitter.com/share?text=%e4%bb%8a%e3%81%af' + year + '%e5%b9%b4AA%e6%9c%88AA%e6%97%a5AA%e6%99%82AA%e5%88%86AA%e7%a7%92%e3%81%a7%e3%81%99%ef%bc%81%2d%20%23nowTime" target="_blank">Twitterでシェアする</a>`.replace('\n', '<br>')';
+function postMin() {
+	var now = new Date();
+    //カウントダウンしたい日を設定
+    var anyDate = new Date("2018/12/31 23:59:59");
+    //日数を計算
+    var ms = anyDate - now;
+        //時間を取得
+        var ha = Math.floor(ms / 3600000);
+        var haa = ha % 24;
+        //分を取得
+        var ma = Math.floor((ms - ha * 3600000) / 60000);
+        //秒を取得
+        var sa = Math.round((ms - ha * 3600000 - ma * 60000) / 1000);
+ 
+        //HTML上に出力
+        var pm = ma + "分";
+        return pm;
 }
-*/
+
+function postSec() {
+	var now = new Date();
+    //カウントダウンしたい日を設定
+    var anyDate = new Date("2018/12/31 23:59:59");
+    //日数を計算
+    var ms = anyDate - now;
+        //時間を取得
+        var ha = Math.floor(ms / 3600000);
+        var haa = ha % 24;
+        //分を取得
+        var ma = Math.floor((ms - ha * 3600000) / 60000);
+        //秒を取得
+        var sa = Math.round((ms - ha * 3600000 - ma * 60000) / 1000);
+ 
+        //HTML上に出力
+        var ps = sa + "秒";
+        return ps;
+}
