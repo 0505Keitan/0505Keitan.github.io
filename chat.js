@@ -1,12 +1,12 @@
 // Firebaseの初期化
 var config = {
-apiKey: "AIzaSyBczL_oF3BT4HuTXDOsihatdxOTEpNMU8U",
-authDomain: "kakeibo-0505keitan.firebaseapp.com",
+apiKey: "",
+authDomain: "firebaseapp.com",
 };
 firebase.initializeApp(config);
 
 // データベースと接続する
-var messagesRef = new Firebase('https://kakeibo-0505keitan.firebaseio.com/');
+var messagesRef = new Firebase('https://firebaseio.com/');
 
 var messageField = $('#messageInput');
 var nameField = $('#nameInput');
