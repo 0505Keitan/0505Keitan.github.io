@@ -6,7 +6,7 @@
 </script>
 </head>
 <body>
-<form name='mainForm'>  
+<form name='settings'>  
   <div>
     <h3>パーソナリティ</h3>
     <input name='p_name' type='text' value=''>
@@ -15,6 +15,10 @@
     <h3>ゲスト</h3>
     <input name='g_name' type='text' value=''>
   </div>
+  <div>
+    <h3>第n回(未実装)</h3>
+    <input name='n_vol' type='number' value=''>
+  </div>
   </form>
 <button onClick="draw1()" value="生成">生成</button>
 <br>
@@ -22,9 +26,10 @@
 <canvas id="cv1" width="1300" height="700"></canvas>
 
 <script>
-var form = document.forms.mainForm;
+var form = document.forms.settings;
   form.p_name.value = '';
   form.g_name.value = '';
+  form.n_vol.value = '';
 function draw1(){
   var ctx = document.getElementById("cv1").getContext("2d");
   ctx.drawImage(img,0,0,1300,700);
