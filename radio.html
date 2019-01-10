@@ -1,0 +1,45 @@
+<head>
+<meta charset='utf-8'>
+<script>
+  var img = new Image();    //画像オブジェクト作成
+  img.src = "./radio.jpg";  //写真のパスを指定する
+</script>
+</head>
+<body>
+<form name='mainForm'>  
+  <div>
+    <h3>パーソナリティ</h3>
+    <input name='p_name' type='text' value=''>
+  </div>
+  <div>
+    <h3>ゲスト</h3>
+    <input name='g_name' type='text' value=''>
+  </div>
+  </form>
+<button onClick="draw1()" value="生成">生成</button>
+<br>
+
+<canvas id="cv1" width="1300" height="700"></canvas>
+
+<script>
+var form = document.forms.mainForm;
+  form.p_name.value = '';
+  rorm.g_name.value = '';
+function draw1(){
+  var ctx = document.getElementById("cv1").getContext("2d");
+  ctx.drawImage(img,0,0,1300,700);
+  
+  var txt = form.p_name.value; //描画する文字
+
+ctx.font = " 45px 筑紫A丸ゴシックStdR"; //フォントにArial,40px,斜体を指定
+ctx.fillStyle = "#004358"; //塗り潰し色を緑に
+
+ctx.fillText(txt,200,170);      //テキストを塗り潰しで描画
+  
+  var per = form.g_name.value; //描画する文字
+
+ctx.fillText(per,200,320);      //テキストを塗り潰しで描画
+
+}
+</script>
+</body>
