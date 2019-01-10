@@ -22,24 +22,23 @@
 <canvas id="cv1" width="1300" height="700"></canvas>
 
 <script>
-var form = document.forms.mainForm;
+  const form = document.forms.mainForm;
   form.p_name.value = '';
   form.g_name.value = '';
-function draw1(){
-  var ctx = document.getElementById("cv1").getContext("2d");
-  ctx.drawImage(img,0,0,1300,700);
-  
-  var txt = form.p_name.value; //描画する文字
 
-ctx.font = " 45px 筑紫A丸ゴシックStdR"; //フォントにArial,40px,斜体を指定
-ctx.fillStyle = "#004358"; //塗り潰し色を緑に
+  function draw1(){
+    const img = new Image();
+    img.addEventListener('load', () => {
+      const ctx = document.getElementById('cv1').getContext('2d');
+      ctx.drawImage(img, 0, 0, 1300, 700);
+      ctx.font = '45px 筑紫A丸ゴシックStdR';
+      ctx.fillStyle = '#004358';
 
-ctx.fillText(txt,200,170);      //テキストを塗り潰しで描画
-  
-  var per = form.g_name.value; //描画する文字
+      ctx.fillText(form.p_name.value, 200, 170);
 
-ctx.fillText(per,200,320);      //テキストを塗り潰しで描画
-
-}
+      ctx.fillText(form.g_name.value, 200, 320);
+    });
+    img.src = './images/radio.jpg';
+  }
 </script>
 </body>
