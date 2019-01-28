@@ -35,6 +35,10 @@ remainDay++;
 }
 // ここからカウントダウン
 
+function arashi() {
+    window.open('https://twitter.com/intent/tweet?button_hashtag=%E5%A4%A7%E9%87%8E%E3%81%8F%E3%82%93%E3%81%AE%E5%A4%8F%E4%BC%91%E3%81%BF&ref_src=twsrc%5Etfw', '_blank', 'width=450,height=500');
+}
+
 function postDay() {
 	var now = new Date();
  
