@@ -31,7 +31,7 @@ remainDay = Math.floor((anyDays - now) / (24*60*60*1000));
 remainDay++;
  
         
-	window.open('https://twitter.com/share?url=https://0505Keitan.github.io/tools/arashi.html&hashtags=大野くんの夏休み&text=嵐活動休止まで' + remainDay + '日' + haa + '時間' + ma + '分' + sa + '秒', '_blank', 'width=450,height=500');
+	window.open('https://twitter.com/share?url=https://0505Keitan.github.io/tools/arashi.html&hashtags=大野くんの夏休み,嵐&text=嵐活動休止まで' + remainDay + '日' + haa + '時間' + ma + '分' + sa + '秒', '_blank', 'width=450,height=500');
 }
 // ここからカウントダウン
 
