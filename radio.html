@@ -45,18 +45,15 @@
   function draw(){
     img.addEventListener('load', () => {
       const ctx = document.getElementById('cv').getContext('2d');
-      const ctx2 = document.getElementById('cv').getContext('2d');
       ctx.drawImage(img, 0, 0, 1300, 700);
       ctx.font = '45px 筑紫A丸ゴシックStdR';
       ctx.fillStyle = '#004358';
-      ctx2.font = '45px 筑紫A丸ゴシックStdR';
-      ctx2.fillStyle = '#FFF';
 
       ctx.fillText(form.p_name.value, 200, 170);
 
       ctx.fillText(form.g_name.value, 200, 320);
       
-      ctx2.fillText(form.t_name.value, 100, 600);
+      ctx.fillText(form.t_name.value, 100, 650);
       
       ctx.fillText(form.n_vol.value, 1160, 582);
     });
