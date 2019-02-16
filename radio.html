@@ -41,6 +41,8 @@
   form.g_name.value = '';
   form.t_name.value = '';
   form.n_vol.value = '00';
+  
+  const tv_name = '#' + form.t_name.value;
 
   function draw(){
     img.addEventListener('load', () => {
@@ -53,7 +55,7 @@
 
       ctx.fillText(form.g_name.value, 200, 320);
       
-      ctx.fillText(form.t_name.value, 100, 650);
+      ctx.fillText(tv_name, 100, 650);
       
       ctx.fillText(form.n_vol.value, 1160, 582);
     });
