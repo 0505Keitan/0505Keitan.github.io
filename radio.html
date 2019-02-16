@@ -45,6 +45,7 @@
   function draw(){
     img.addEventListener('load', () => {
       const ctx = document.getElementById('cv').getContext('2d');
+      const ctx2 = document.getElementById('cv').getContext('2d');
       ctx.drawImage(img, 0, 0, 1300, 700);
       ctx.font = '45px 筑紫A丸ゴシックStdR';
       ctx.fillStyle = '#004358';
