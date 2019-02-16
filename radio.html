@@ -41,8 +41,6 @@
   form.g_name.value = '';
   form.t_name.value = '';
   form.n_vol.value = '00';
-  
-  const tv_name = '#' + form.t_name.value;
 
   function draw(){
     img.addEventListener('load', () => {
@@ -50,6 +48,11 @@
       ctx.drawImage(img, 0, 0, 1300, 700);
       ctx.font = '45px 筑紫A丸ゴシックStdR';
       ctx.fillStyle = '#004358';
+      if(form.t_name.value === undefined){
+        var tv_name = form.t_name.value;
+    }else{
+        var tv_name = '#' + form.t_name.value;
+    }
 
       ctx.fillText(form.p_name.value, 200, 170);
 
