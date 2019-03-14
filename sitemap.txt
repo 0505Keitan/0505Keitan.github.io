@@ -1,7 +1,8 @@
-https://0505Keitan.github.io/index.html
-https://0505Keitan.github.io/main.html
-https://0505Keitan.github.io/tools/pass.html
-https://0505Keitan.github.io/tools/nowtime.html
-https://0505Keitan.github.io/tools/year.html
-https://0505Keitan.github.io/download.html
-https://keitan.t-server.tk/files/sp/
+https://0505Keitan.com/index.html
+https://0505Keitan.com/download.html
+https://0505Keitan.com/tools/pass.html
+https://0505Keitan.com/tools/nowtime.html
+https://0505Keitan.com/tools/year.html
+https://0505Keitan.com/tools/permission.html
+https://0505Keitan.com/tools/permission-en.html
+https://0505Keitan.com/tools/arashi.html

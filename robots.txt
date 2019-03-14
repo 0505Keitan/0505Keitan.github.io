@@ -1,6 +1,5 @@
 User-agent: *
 
 Disallow: /files/*
-Disallow: /js/*.js
 Disallow: /css/*.css
 Disallow: /images/*
