@@ -163,16 +163,16 @@ body {
 }
 
 #works .card-caption-title {
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 #works .card-caption-info {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 #works .card-caption-url {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 #works .card-wrapper {
