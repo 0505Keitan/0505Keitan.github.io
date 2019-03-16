@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*メイン*/
+body {
+    background-color :#e9ffe0;
+}
+
+#top{
+  /*width: 100%;*/
+  height: 480px;
+  background-color: #29ad3e;
+  text-align: center;
+  top: 20%;
+}
+
+.top-section {
+  color:#fff;
+  font-size: 60px;
+  font-family: "Abel";
+  padding-top: 160px;
+
+  img {
+    border-radius: 80px;
+    width: 160px;
+    border: solid #fff;
+  }
+
+  .square_btn{
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      background: #668ad8;/*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 4px #627295;
+      border-radius: 3px;
+
+      &:active {/*ボタンを押したとき*/
+          -ms-transform: translateY(4px);
+          -webkit-transform: translateY(4px);
+          transform: translateY(4px);/*下に動く*/
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+          border-bottom: none;
+      }
+  }
+}
+
+.box {
+    padding: 8px 16px;
+    margin: 32px 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    width: 25%;
+
+    p {
+       margin: 0;
+       padding: 0;
+   }
+}
+
+.fab {
+    font-size: 50px;
+    color: #333;
+}
+.fas {
+    font-size: 50px;
+    color: #333;
+}
+
+@media screen and (max-width: 860px) {
+  #top{
+    height: 120px;
+    background-color: #29ad3e;
+    text-align: center;
+    top: 20%;
+  }
+
+  .top-section {
+    padding-top: 20px;
+    p{
+      display: none;
+    }
+
+    img{
+      width:80px;
+      border-radius: 60px;
+    }
+  }
+  .box {
+    width: 50%;
+  }
+}
+
+/* p in */
+.inner {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section .inner {
+  padding: 80px 10px;
+}
+
+.section .section-title-block {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section .section-title {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f39ac7;
+}
+
+.section .section-desc {
+  text-align: center;
+}
+
+.two-column-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.two-column-image {
+  width: 33%;
+}
+
+.two-column-image img {
+  margin: 0 auto;
+}
+
+.two-column-desc {
+  width: 62%;
+}
+
+#works .card {
+  width: 32%;
+}
+
+#works .card {
+  margin-bottom: 50px;
+}
+
+#works .card-image {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#works .card-caption-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#works .card-caption-info {
+  font-size: 15px;
+}
+
+#works .card-caption-url {
+  font-size: 13px;
+}
+
+#works .card-wrapper {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+a {
+  color: #1ca9e3;
+  text-decoration: none;
+}
+
+#gnav {
+  padding: 10px;
+  font-family: 'Open sans', sans-serif;
+  z-index: 100;
+}
+
+#gnav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#gnav li {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+#gnav li:last-child {
+  margin-right: 0;
+}
+
+#gnav li a {
+  color: #333;
+  letter-spacing: -0.01em;
+}
+
+#gnav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f3f3f3;
+  box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, 0, 0);
+}
+
+ul, li {
+  list-style: none;
+}
