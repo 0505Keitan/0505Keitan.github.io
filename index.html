@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#1d8a8a"
+        },
+        "button": {
+          "background": "#62ffaa"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom-left",
+      "content": {
+        "message": "当サイトでは、アクセス解析のためCookieを利用しています。",
+        "dismiss": "OK",
+        "link": "詳しく",
+        "href": "./cookie.html"
+      }
+    })});
+    </script>
     <meta charset="utf-8">
     <title>0505Keitan</title>
     <meta name="viewport" content="width=device-width">
@@ -16,6 +39,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-104906538-15');
     </script>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
   </head>
 <body>
   <div id="top">
@@ -143,6 +167,5 @@
           </div>
         </div>
       </section>
-      <p>当サイトではアクセス解析のためCookieを利用しています。</p>
 </body>
 </html>
