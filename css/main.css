@@ -92,7 +92,7 @@ p {
   width: 95%; }
   .kusaBox .kusa {
     width: 100%;}
-  .kusaBox p {
+  .kusaBox .title {
     margin: 0;
     padding: 0;
     font-size: 30px;
