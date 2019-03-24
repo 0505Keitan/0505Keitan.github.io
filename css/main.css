@@ -157,7 +157,10 @@ p {
 
 #works .card-image {
   display: block;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  border-radius: 10%;  /* 角丸半径を50%にする(=円形にする) */
+    width:  180px;       /* ※縦横を同値に */
+    height: 180px;}
 
 #works .card-caption-title {
   font-size: 20px;
