@@ -16,6 +16,13 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-104906538-15');
+
+    function clear() {
+      alert('認証に成功しました！')
+    }
+    function denied() {
+      alert('時間切れです。')
+    }
     </script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
   </head>
@@ -38,5 +45,8 @@
     <br>
     <h1>^^</h1>
     <br>
-    <div class="g-recaptcha" data-sitekey="6LeiEpoUAAAAAPT9MN-ceEb3gNFOU6vVnLAV55Sr"></div>
-    <a href="./index.html">
+    <div class="g-recaptcha" data-callback="clear()" expired-callback="denied()" data-sitekey="6LeiEpoUAAAAAPT9MN-ceEb3gNFOU6vVnLAV55Sr"></div>
+    <a href="./index.html">戻る</a>
+  </div>
+</body>
+</html>
