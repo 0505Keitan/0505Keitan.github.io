@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
     window.addEventListener("load", function(){
     window.cookieconsent.initialise({
@@ -177,6 +178,13 @@
                 <a href="https://twitter.com/0505Keitan" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="mailto:contact@0505Keitan.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
+            <div class="g-recaptcha" data-callback="clear" data-sitekey="6LeiEpoUAAAAAPT9MN-ceEb3gNFOU6vVnLAV55Sr"></div>
+            <input id="reCapcha" type="submit" disabled="disabled" value="送信">
+            <script>
+            function clear() {
+                document.getElementById("reCapcha").disabled = false;
+            }
+          </script>
           </div>
         </div>
       </section>
