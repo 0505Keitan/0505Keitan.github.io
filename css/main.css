@@ -26,6 +26,13 @@ p {
   }
 }
 
+.gengo {
+  font-size: 40px;}
+  .newGengo {
+  font-size: 55px;
+  color: red;
+  font-weight: bold;}
+
 .top-section {
   color: #fff;
   font-size: 60px;

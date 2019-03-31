@@ -24,6 +24,20 @@
         "href": "./cookie.html"
       }
     })});
+    timerID = setInterval('gengoNew()',0.01); //0.00001秒毎にclock()を実行
+    function gengoNew() {
+    var now = new Date();
+  	var mon = now.getMonth()+1;
+    var day = now.getDate();
+    var hour = now.getHours();
+    var sec = now.getSeconds();
+    if(mon === 4 && day === 1 && hour >= 12){
+      var gengo = document.getElementById("newGengo");
+      var gengoName = document.getElementById("gengoName");
+      gengo.innerHTML = '<span class="newGengo" id="newGengo">&#x32FF</span>';
+      gengoName.textContent = '新';
+    }
+  }
     </script>
     <meta charset="utf-8">
     <title>0505Keitan</title>
@@ -59,6 +73,8 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <br>
+    <p class="gengo"><span id="gengoName">今の</span>元号は<span class="newGengo" id="newGengo">平成</span>だよ</p>
     <div class="kusaBox">
       <p class="title">草を生やした数</p>
     <img class="kusa" src="https://grass-graph.moshimo.works/images/0505Keitan.png?background=none&width=999999999">
