@@ -37,10 +37,22 @@
       gengo.innerHTML = '<span class="newGengo" id="newGengo">&#x32FF</span>';
       gengoName.textContent = '新';
     }
+    if(mon === 4 && day === 1 && hour >= 7){
+      var name = document.getElementById("lieName");
+      name.textContent = 'レゴレゴけいたん';
+      var twitter = document.getElementById("twitter");
+      twitter.textContent = '青い鳥';
+      var github = document.getElementById("github");
+      github.textContent = '設計図共有';
+      var about = document.getElementById("about");
+      about.textContent = 'だあれ？';
+      var kusaWWW = document.getElementById("kusaWWW");
+      kusaWWW.textContent = 'wwwwwwwwwwww';
+    }
   }
     </script>
     <meta charset="utf-8">
-    <title>0505Keitan</title>
+    <title><span id="lieName">0505Keitan</span></title>
     <meta name="viewport" content="width=device-width">
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -60,33 +72,34 @@
   <div id="top">
     <div class="top-section">
       <img src="./images/0505Keitan.png">
-      <p>0505Keitan</p>
+      <p><span id="lieName">0505Keitan</span></p>
     </div>
   </div>
   <div align="center">
 
     <nav id="gnav">
       <ul>
-        <li><a href="https://twitter.com/0505Keitan">Twitter</a></li>
-        <li><a href="https://github.com/0505Keitan">GitHub</a></li>
-        <li><a href="https://about.0505Keitan.com">About</a></li>
+        <li><a href="https://twitter.com/0505Keitan"><span id="twitter">Twitter</span></a></li>
+        <li><a href="https://github.com/0505Keitan"><span id="github">GitHub</span></a></li>
+        <li><a href="https://about.0505Keitan.com"><span id="about">About</span></a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <br>
     <p class="gengo"><span id="gengoName">今の</span>元号は<span class="newGengo" id="newGengo">平成</span>だよ</p>
     <div class="kusaBox">
-      <p class="title">草を生やした数</p>
+      <p class="title"><span id="kusaWWW">草を生やした数</span></p>
     <img class="kusa" src="https://grass-graph.moshimo.works/images/0505Keitan.png?background=none&width=999999999">
     <p class="info">反映まで時間かかります。今すぐに見たい場合は<a href="https://github.com/0505Keitan">GitHub</a>へ</p>
   </div>
     <br>
     <div class="box">
-    <p  style="font-size: 30px;">投げ銭</p>
+    <p style="font-size: 30px;">投げ銭</p>
     <a href="kyash://qr/u/2080595130168229012">
     <img src="./images/kyash.JPG" width=70% class="card-image">
     </a>
   </div>
+  <br>
   <br>
   <h1>主な作ったものたち</h1>
   </div>
