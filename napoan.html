@@ -66,16 +66,10 @@
         <option value="2019">2019</option>
       </select> 年<br>
       <p>このDiscordサーバーにはBOTがいます。認証ボタンを押した後「＃ようこそ」チャンネルでokと入力してください。<br>書き込みできるようになります。</p>
-      <div class="g-recaptcha" data-callback="clear" data-sitekey="6LeiEpoUAAAAAPT9MN-ceEb3gNFOU6vVnLAV55Sr"></div>
       <input style="font-size:100px" id="reCapcha" type="submit" disabled="disabled" onClick="ninshou" value="認証">
     <br>
   </div>
   <script>
-  function clear() {
-    document.getElementById("reCapcha").disabled = false;
-  }else{
-    document.getElementById("reCapcha").disabled = true;
-  }
   function ninshou() {
     var age = document.getElementById("year").value;
     if(age ==< 2007){
