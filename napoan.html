@@ -9,14 +9,17 @@
     <link rel="icon" type="image/png" href="./images/0505Keitan.png">
     <link rel="stylesheet" type="text/css" href="css/napoan.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104906538-15"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-104906538-15');
-    </script>
+    function ninshou() {
+      var age = document.getElementById("year").value;
+      if(age <= '2007'){
+        alert('ようこそナポアンサーバーへ');
+      }else{
+        alert('ごめんね。Discordは13さいよりしたのひとはつかえないよ！');
+        window.location.href = 'https://kids.yahoo.co.jp/';
+      }
+    }
+  </script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
   </head>
 <body>
@@ -66,19 +69,8 @@
         <option value="2019">2019</option>
       </select> 年<br>
       <p>このDiscordサーバーにはBOTがいます。認証ボタンを押した後「＃ようこそ」チャンネルでokと入力してください。<br>書き込みできるようになります。</p>
-      <input style="font-size:50px" id="reCapcha" type="submit" onClick="ninshou" value="認証">
+      <input style="font-size:50px" type="submit" onClick="ninshou()" value="認証">
     <br>
   </div>
-  <script>
-  function ninshou() {
-    var age = document.getElementById("year").value;
-    if(age ==< 2007){
-      alert('ようこそナポアンサーバーへ');
-    }else{
-      alert('ごめんね。Discordは13さいよりしたのひとはつかえないよ！');
-      window.location.href = 'https://kids.yahoo.co.jp/';
-    }
-  }
-</script>
 </body>
 </html>
