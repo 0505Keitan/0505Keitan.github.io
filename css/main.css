@@ -1,126 +1,97 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Abel");
-@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru");
-@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
-@import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /*メイン*/
 body {
-  background-color: #e9ffe0; }
+    background-color :#e9ffe0;
+}
 
-#top {
+#top{
   /*width: 100%;*/
   height: 480px;
   background-color: #29ad3e;
   text-align: center;
-  top: 20%; }
+  top: 20%;
+}
 
-p {
-  .profile {
-    font-family: 'Kosugi Maru', sans-serif;
+.top-section {
+  color:#fff;
+  font-size: 60px;
+  font-family: "Abel";
+  padding-top: 160px;
+
+  img {
+    border-radius: 80px;
+    width: 160px;
+    border: solid #fff;
+  }
+
+  .square_btn{
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      background: #668ad8;/*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 4px #627295;
+      border-radius: 3px;
+
+      &:active {/*ボタンを押したとき*/
+          -ms-transform: translateY(4px);
+          -webkit-transform: translateY(4px);
+          transform: translateY(4px);/*下に動く*/
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+          border-bottom: none;
+      }
   }
 }
 
-.gengo {
-  font-size: 40px;}
-  .newGengo {
-  font-size: 55px;
-  color: red;
-  font-weight: bold;}
-
-.top-section {
-  color: #fff;
-  font-size: 60px;
-  font-family: "Abel";
-  padding-top: 160px; }
-  .top-section img {
-    border-radius: 80px;
-    width: 160px;
-    border: solid #fff; }
-  .top-section .square_btn {
-    display: inline-block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: #668ad8;
-    /*ボタン色*/
-    color: #FFF;
-    border-bottom: solid 4px #627295;
-    border-radius: 3px; }
-    .top-section .square_btn:active {
-      /*ボタンを押したとき*/
-      -ms-transform: translateY(4px);
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-      /*下に動く*/
-      -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-      /*影を小さく*/
-      border-bottom: none; }
-
 .box {
-  padding: 8px 16px;
-  margin: 32px 0;
-  font-weight: bold;
-  color: #1ba9e1;
-  /*文字色*/
-  background: #FFF;
-  border: solid 3px #1ba9e1;
-  /*線*/
-  border-radius: 10px;
-  /*角の丸み*/
-  width: 25%; }
-  .box p {
-    margin: 0;
-    padding: 0; }
+    padding: 8px 16px;
+    margin: 32px 0;
+    font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    width: 25%;
+
+    p {
+       margin: 0;
+       padding: 0;
+   }
+}
 
 .fab {
-  font-size: 50px;
-  color: #333; }
-
+    font-size: 50px;
+    color: #333;
+}
 .fas {
-  font-size: 50px;
-  color: #333; }
-
-.kusaBox {
-  margin: 32px 0;
-  font-weight: bold;
-  color: #000;
-  /*文字色*/
-  background: #FFF;
-  border: solid 3px #389631;
-  /*線*/
-  border-radius: 10px;
-  /*角の丸み*/
-  width: 95%; }
-  .kusaBox .kusa {
-    width: 100%;}
-  .kusaBox .title {
-    margin: 0;
-    padding: 0;
-    font-size: 30px;
-    color: #389631;}
-  .kusaBox .info {
-    text-align: right;
-    font-size: 12px;
-    padding: 0 20px 5px 0;}
+    font-size: 50px;
+    color: #333;
+}
 
 /* p in */
 .inner {
   max-width: 1320px;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .section .inner {
-  padding: 80px 10px; }
+  padding: 80px 10px;
+}
 
 .section .section-title-block {
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+}
 
 .section .section-title {
   font-family: 'Oswald', sans-serif;
@@ -129,10 +100,12 @@ p {
   font-size: 56px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #f39ac7; }
+  color: #f39ac7;
+}
 
 .section .section-desc {
-  text-align: center; }
+  text-align: center;
+}
 
 .two-column-wrapper {
   width: 80%;
@@ -145,59 +118,65 @@ p {
   flex-wrap: nowrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 
 .two-column-image {
-  width: 33%; }
+  width: 33%;
+}
 
 .two-column-image img {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .two-column-desc {
-  width: 62%; }
+  width: 62%;
+}
 
 #works .card {
-  width: 32%; }
+  width: 300px;
+  max-width: 80%;
+}
 
 #works .card {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+}
 
 #works .card-image {
   display: block;
   margin-bottom: 8px;
-  border-radius: 10%;  /* 角丸半径を50%にする(=円形にする) */
-    width:  180px;       /* ※縦横を同値に */
-    height: 180px;}
+}
 
 #works .card-caption-title {
   font-size: 20px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 #works .card-caption-info {
-  font-size: 15px; }
+  font-size: 15px;
+}
 
 #works .card-caption-url {
-  font-size: 13px; }
+  font-size: 13px;
+}
 
 #works .card-wrapper {
   padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: center;
+}
 
 a {
   color: #1ca9e3;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 #gnav {
   padding: 10px;
   font-family: 'Open sans', sans-serif;
-  z-index: 100; }
+  z-index: 100;
+}
 
 #gnav ul {
   display: -webkit-box;
@@ -207,47 +186,58 @@ a {
   flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 #gnav li {
   font-weight: bold;
   font-size: 18px;
-  padding: 0 20px; }
+  padding: 0 20px;
+}
 
 #gnav li:last-child {
-  margin-right: 0; }
+  margin-right: 0;
+}
 
 #gnav li a {
   color: #333;
-  letter-spacing: -0.01em; }
+  letter-spacing: -0.01em;
+}
 
 #gnav {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #fff;
-  -webkit-box-shadow: 0px 5px 32px rgba(100, 100, 100, 0.1);
   box-shadow: 0px 5px 32px rgba(100, 100, 100, 0.1);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+}
 
 ul, li {
-  list-style: none; }
+  list-style: none;
+}
 
 @media screen and (max-width: 860px) {
-  #top {
+  #top{
     height: 120px;
     background-color: #29ad3e;
     text-align: center;
-    top: 20%; }
+    top: 20%;
+  }
+
   .top-section {
-    padding-top: 20px; }
-    .top-section p {
-      display: none; }
-    .top-section img {
-      width: 80px;
-      border-radius: 60px; }
+    padding-top: 20px;
+    p{
+      display: none;
+    }
+
+    img{
+      width:80px;
+      border-radius: 60px;
+    }
+  }
   .box {
-    width: 50%; } }
+    width: 50%;
+  }
+}
