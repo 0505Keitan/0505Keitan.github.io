@@ -157,7 +157,8 @@ p {
   width: 62%; }
 
 #works .card {
-  width: 32%; }
+  width: 32%; 
+}
 
 #works .card {
   margin-bottom: 50px; }
@@ -236,7 +237,7 @@ a {
 ul, li {
   list-style: none; }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 480px) {
   #top {
     height: 120px;
     background-color: #29ad3e;
@@ -250,4 +251,13 @@ ul, li {
       width: 80px;
       border-radius: 60px; }
   .box {
-    width: 50%; } }
+    width: 50%; } 
+  #works .card {
+    min-width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  #works .card img {
+    margin: 0 auto;
+  }
+}
