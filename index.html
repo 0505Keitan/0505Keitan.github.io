@@ -198,21 +198,12 @@
                 <a href="mailto:contact@0505Keitan.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
             <br>
-            <font color="red">動かないよ！</font>
             <form action="https://tweet-media-viewer.herokuapp.com/app/send.php" method="post">
               <p>お名前</p><input type="text" name="name" required>
               <p>E-mail</p><input type="text" name="mail" required>
               <p>内容</p><textarea name="content" cols="50" rows="5" required></textarea>
-              <div class="g-recaptcha" data-callback="clear" data-sitekey="6LeiEpoUAAAAAPT9MN-ceEb3gNFOU6vVnLAV55Sr"></div>
-              <input id="reCapcha" type="submit" disabled="disabled" value="送信">
+              <input type="submit" value="送信">
             </form>
-            <script>
-            function clear() {
-                document.getElementById("reCapcha").disabled = false;
-              }else{
-                document.getElementById("reCapcha").disabled = true;
-              }
-            </script>
           </div>
         </div>
       </section>
