@@ -35,12 +35,6 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104906538-15"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script>
-       function onSubmit(token) {
-         document.getElementById("contact").submit();
-       }
-     </script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -204,11 +198,12 @@
                 <a href="mailto:contact@0505Keitan.com" target="_blank"><i class="fas fa-envelope"></i></a>
             </div>
             <br>
-            <form action="https://tweet-media-viewer.herokuapp.com/app/send.php" method="post" id="contact">
+            <form action="https://tweet-media-viewer.herokuapp.com/app/send.php" method="post">
               <p>お名前</p><input type="text" name="name" required>
               <p>E-mail</p><input type="text" name="mail" required>
               <p>内容</p><textarea name="content" cols="50" rows="5" required></textarea>
-              <button class="g-recaptcha" data-sitekey="6LeiEpoUAAAAAPT9MN-ceEb3gNFOU6vVnLAV55Sr" data-callback='onSubmit' style="font-size:20px;">送信</button>
+              <br>
+              <input type="submit" value="送信">
             </form>
           </div>
         </div>
