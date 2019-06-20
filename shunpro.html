@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>瞬間中作文</title>
+    <style>
+    body{
+        margin: 20px;	/* bodyの外側の余白を指定する */
+        padding: 50px 10px 50px 10px;	/* bodyの内側余白を指定する(上:右:下:左) */
+        background-color:#eeeeee;
+    }
+    .Header {
+        position: fixed;	/* ヘッダーを固定する */
+        top: 0;	/* 上部から配置の基準位置を決める */
+        left: 0;	/* 左から配置の基準位置を決める */
+        width: 100%;	/* ヘッダーの横幅を指定する */
+        height: 35px;	/* ヘッダーの高さを指定する */
+        padding: 10px;	/* ヘッダーの余白を指定する(上下左右) */
+        background-color: #333333;	/* ヘッダーの背景色を指定する */
+        color: #ffffff;	/* フォントの色を指定する */
+        font-size:150%;
+    }
+    .Contents {
+        width: 100%;	/* コンテンツの横幅を指定する */
+        overflow: auto; /* コンテンツの表示を自動に設定（スクロール） */
+    }
+    .box11{
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        color: #4a4d5e;
+        background: white;
+        border-top: solid 5px #5d627b;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    }
+    .box11 p {
+        margin: 0;
+        padding: 10px;
+    }
+    .center{
+        text-align:center;
+    }
+    input[type="text"]{
+        outline: none;
+        border: 1px solid #aaa;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        width:70%;
+        text-align:center;
+        height:25px;
+        font-size:20px;
+    }
+    input[type="text"]:focus{
+        box-shadow: 0 0 7px #1abc9c;
+        border: 1px solid #1abc9c;
+    }
+    #moji{
+        border-radius: 3px ;
+        padding: 5px;
+        background-color: skyblue;
+    }
+    .btn-push {
+        display: inline-block;
+        max-width: 180px;
+        text-align: left;
+        background-color: #1abc9c;
+        font-size: 16px;
+        color: #FFF;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 24px;
+        border-radius: 4px;
+        border-bottom: 4px solid #1add9c;
+    }
+
+    .btn-push:active {
+        transform: translateY(4px);
+        border-bottom: none;
+    }
+    .box2 {
+        display:none;
+        border: 1px dashed #ccc;
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        font-weight: bold;
+        color: #ff0000;/*文字色*/
+        background: #FFF;
+        border: solid 3px #d36060;/*線*/
+        border-radius: 10px;/*角の丸み*/
+    }
+    .box2 p {
+        margin: 0;
+        padding: 0;
+    }
+    #mono2{
+        color: #00aa00;
+        border: solid 3px #60d373;/*線*/
+    }
+    </style>
+</head>
+<body>
+    <div class="Header">瞬プロ</div>
+    <div class="Contents">
+        <div class="box11">
+            <p>
+                言語選択<br>
+                <select id="level">
+                <option value="0" disabled>=選択してください=</option>
+                <option value="1">JavaScript</option>
+                <option value="2">PHP</option>
+                </select>
+                <input type="button" value="開始する" onclick="kantango();">
+            </p>
+        </div>
+        <div class="box11 center">
+            <p>
+                <div id="mono"class="box2">
+                    <p>正解不正解</p>
+                </div>
+                <div id="mono2"class="box2">
+                    <p>正解不正解</p>
+                </div>
+                <h1 id="monda">問題文</h1>
+                <span id="moji">●文字で回答</span><br><br>
+                <input type="text" id="kotae">
+                <div class="container">
+                    <a href="#" class="btn-push" onclick="kaitou();">回答</a>
+                </div>
+    </div>
+    <script>
+        var tango1=["コンソールで'Hello, World!'と表示","'N'と'高等学校'を繋げて表示する"]
+        var tantan1=["console.log('Hello, World!');","console.log('N' + '高等学校');"]
+        var tango2=["ページに'Hello, PHP!'と表示","'N'と'高等学校'を繋げて表示する"]
+        var tantan2=["echo 'Hello, PHP!';","echo 'N' . '高等学校';"]
+        var tango=[]
+        var tantan=[]
+        var now = 0
+        var i=0
+        var seito=0
+        function kantango(){
+            seito=0
+            var num = document.getElementById("level").selectedIndex;
+            switch(num){
+                case 0:
+                    alert('レベルが選択されていません。')
+                    return
+                    break;
+                case 1:
+                    seito=0
+                    i=0
+                    now=1
+                    tango=tango1
+                    tantan=tantan1
+                    document.getElementById("monda").innerHTML=tango[i]
+                    document.getElementById("moji").innerHTML=tantan[i].length+"文字で回答"
+                    document.getElementById("mono2").style.display = "none";
+                    document.getElementById("mono").style.display = "none";
+                    break;
+                case 2:
+                    seito=0
+                    i=0
+                    now=2
+                    tango=tango2
+                    tantan=tantan2
+                    document.getElementById("monda").innerHTML=tango[i]
+                    document.getElementById("moji").innerHTML=tantan[i].length+"文字で回答"
+                    document.getElementById("mono2").style.display = "none";
+                    document.getElementById("mono").style.display = "none";
+                    break;
+
+            }
+        }
+        function kaitou(){
+            if (now==0){
+                alert("まずレベルを選択してください。");
+                return;
+            }
+            var kaito=document.getElementById("kotae").value
+            if (kaito==tantan[i]){
+                document.getElementById("mono2").style.display = "inline-block";
+                document.getElementById("mono").style.display = "none";
+                document.getElementById("mono2").innerHTML="正解<br>正答:"+tantan[i]+"<br>回答:"+kaito;
+                seito+=1
+            }else{
+                document.getElementById("mono2").style.display = "none";
+                document.getElementById("mono").style.display = "inline-block";
+                document.getElementById("mono").innerHTML="不正解<br>正答:"+tantan[i]+"<br>回答:"+kaito;
+            }
+            i+=1
+            if(i==tantan.length){
+                alert("終了！ 正答数：" + tantan.length + "問中"+seito+"問")
+                now=0
+                location.reload();
+                return;
+            }
+            document.getElementById("monda").innerHTML=tango[i]
+            document.getElementById("moji").innerHTML=tango[i].length+"文字で回答"
+            document.getElementById("kotae").value=""
+        }
+    </script>
+</body>
+</html>
