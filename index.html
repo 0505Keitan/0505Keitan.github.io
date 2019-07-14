@@ -220,6 +220,7 @@
             </div>
             <br>
             <form action="https://keitan.herokuapp.com/app/send.php" method="post">
+              <input type="hidden" name="send" value="home">
               <p>お名前</p><input type="text" name="name" required>
               <p>E-mail</p><input type="email" name="mail" required>
               <p>内容</p><textarea name="content" cols="50" rows="5" required></textarea>
