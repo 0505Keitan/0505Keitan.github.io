@@ -11,14 +11,14 @@
 |8/4~|新体制スタート|
 
 ## 立候補者一覧(五十音順)
-###[ナポアン](https://0505keitan.com/napoan/napoan)
+[ナポアン](https://0505keitan.com/napoan/napoan)
 
-###[panaki](https://0505keitan.com/napoan/panaki)
+[panaki](https://0505keitan.com/napoan/panaki)
 
-###[ひややっこ](https://0505keitan.com/napoan/hiyayakko)
+[ひややっこ](https://0505keitan.com/napoan/hiyayakko)
 
-###[mametaku](https://0505keitan.com/napoan/mametaku)
+[mametaku](https://0505keitan.com/napoan/mametaku)
 
-###[みずき](https://0505keitan.com/napoan/mizuki)
+[みずき](https://0505keitan.com/napoan/mizuki)
 
-###[ラヴィエ](https://0505keitan.com/napoan/ravie)
+[ラヴィエ](https://0505keitan.com/napoan/ravie)
