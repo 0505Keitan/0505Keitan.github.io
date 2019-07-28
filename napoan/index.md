@@ -11,14 +11,14 @@
 |8/4~|新体制スタート|
 
 ## 立候補者一覧(五十音順)
-[ナポアン](https://0505keitan.com/napoan/napoan)
+[ナポアン](https://0505keitan.com/napoan/napoan) - 無所属
 
-[panaki](https://0505keitan.com/napoan/panaki)
+[panaki](https://0505keitan.com/napoan/panaki) - 無所属
 
-[ひややっこ](https://0505keitan.com/napoan/hiyayakko)
+[ひややっこ](https://0505keitan.com/napoan/hiyayakko) - 無所属
 
-[mametaku](https://0505keitan.com/napoan/mametaku)
+[mametaku](https://0505keitan.com/napoan/mametaku) - ナポアンから国民を守る党
 
-[みずき](https://0505keitan.com/napoan/mizuki)
+[みずき](https://0505keitan.com/napoan/mizuki) - 無所属
 
-[ラヴィエ](https://0505keitan.com/napoan/ravie)
+[ラヴィエ](https://0505keitan.com/napoan/ravie) - 活新党
