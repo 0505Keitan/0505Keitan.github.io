@@ -1,4 +1,5 @@
 # みずき
+[掲示板に戻る](https://0505keitan.com/napoan/index)
 
 ##### 公約
 

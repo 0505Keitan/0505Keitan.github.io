@@ -1,4 +1,5 @@
 # panaki
+[掲示板に戻る](https://0505keitan.com/napoan/index)
 
 panakiです。今のナポアンサーバーは人数はいるのにアクティブなメンバーが少なすぎないとは思いませんか？
 
