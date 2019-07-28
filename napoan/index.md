@@ -11,14 +11,22 @@
 |8/4~|新体制スタート|
 
 ## 立候補者一覧(五十音順)
+- 横に書いてある説明は利便性を図ろうとしたために私が候補者の声明を読んで勝手に書いたものです。きちんと各候補者の声明を読むことをお勧めします。
+
 [ナポアン](https://0505keitan.com/napoan/napoan)
+- 無戦勝確定皇帝候補ナポアン
 
 [panaki](https://0505keitan.com/napoan/panaki)
-
+- 今のナポ鯖のいいところは残し、悪いところはぶっ壊す
+ 
 [ひややっこ](https://0505keitan.com/napoan/hiyayakko)
+- 過度な言語統制はせず、荒らしなどは適切に対応する
 
 [mametaku](https://0505keitan.com/napoan/mametaku)
+- ナポアンの行動を指導し、ルール改変などは信任投票で
 
 [みずき](https://0505keitan.com/napoan/mizuki)
+- ナポアンにここを閉めるかどうか問う
 
 [ラヴィエ](https://0505keitan.com/napoan/ravie)
+- より自由でコミュニティとしての役割を果たせる活のあるサーバーを目指す
