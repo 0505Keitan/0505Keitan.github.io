@@ -11,7 +11,7 @@
 |8/4~|新体制スタート|
 
 ## 立候補者一覧(五十音順)
-[ナポアン](https://0505keitan.com/napoan/napoan) - 無所属
+~~ナポアン - 無所属~~ ナポアンさんは立候補をおりました。
 
 [panaki](https://0505keitan.com/napoan/panaki) - 無所属
 
