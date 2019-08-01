@@ -1,47 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-    window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#1d8a8a"
-        },
-        "button": {
-          "background": "#62ffaa"
-        }
-      },
-      "theme": "classic",
-      "position": "bottom-left",
-      "content": {
-        "message": "当サイトでは、アクセス解析のためCookieを利用しています。",
-        "dismiss": "OK",
-        "link": "詳しく",
-        "href": "./cookie.html"
-      }
-    })});
-    console.info('made by 0505Keitan. v2.3');
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104906538-15"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=ja" async="async" defer="defer"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
     <title>0505Keitan</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
     <link rel="icon" type="image/png" href="./images/0505Keitan.png">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104906538-15"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-104906538-15');
-    </script>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script>
+    window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#1d8a8a"},"button":{"background":"#62ffaa"}},"theme":"classic","position":"bottom-left","content":{"message":"当サイトでは、アクセス解析のためCookieを利用しています。","dismiss":"OK","link":"詳しく","href":"./cookie.html"}})});
+    window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-104906538-15');
+    console.info('made by 0505Keitan. v2.3');
+    </script>
   </head>
 <body>
   <div id="top">
@@ -50,7 +25,6 @@
       <p>0505Keitan</p>
     </div>
   </div>
-  <div align="center">
     <nav id="gnav">
       <ul>
         <li><a href="https://twitter.com/0505Keitan">Twitter</a></li>
@@ -66,97 +40,93 @@
     <img class="kusa" src="https://grass-graph.moshimo.works/images/0505Keitan.png?background=none&width=999999999">
     <p class="info">反映まで時間かかります。今すぐに見たい場合は<a href="https://github.com/0505Keitan">GitHub</a>へ</p>
   </div>
-    <br>
-    <div class="box">
-    <p style="font-size: 30px;">Kyash</p>
+  <br>
+  <div class="box">
+    <p>Kyash</p>
     <a href="kyash://qr/u/2080595130168229012">
-      <img src="./images/kyash.JPG" width=70% class="card-image">
+      <img src="./images/kyash.JPG">
     </a>
     <br>
-    <p style="font-size: 30px;">PolcaLife</p>
+    <p>PolcaLife</p>
     <a href="https://polca.jp/users/0505Keitan">
-      <img src="./images/PolcaLife.png" width=85% class="card-image">
+      <img src="./images/PolcaLife.jpg">
     </a>
   </div>
   <br>
   <br>
-  <h1>主な作ったものたち</h1>
-  </div>
   <section class="section" id="works">
-        <div class="inner">
-          <div class="card-wrapper">
-            <figure class="card">
-              <img src="./images/yasashiikakumeilab.jpg" alt="" width=100% class="card-image">
-              <figcaption class="card-caption">
-                <p class="card-caption-title">やさしいかくめいラボツイートクライアント</p>
-                <p class="card-caption-info">05/2019 - やさしいかくめいラボ運営用のツイートクライアント</p>
-                <p class="card-caption-url"><a class="url-link" href="https://twitter.com/yasashikakumei" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-            <img src="./images/Twitter_Logo_WhiteOnBlue.png" alt="" width=100% class="card-image">
-              <figcaption class="card-caption">
-                <p class="card-caption-title">Tweet Media Viewer</p>
-                <p class="card-caption-info">04/2019 - ツイートの動画を簡単にダウンロードできるサービス。iOSはショートカットだけで利用可能。APIも提供中</p>
-                <p class="card-caption-url"><a class="url-link" href="https://tweet-media-viewer.herokuapp.com" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-            <img src="./images/ar.png" alt="" width=100% class="card-image">
-              <figcaption class="card-caption">
-                <p class="card-caption-title">AR Web Viewer Sample</p>
-                <p class="card-caption-info">06/2019 - iPhoneでスキャンした3DデータをWebでみれるやつ。iOS12〜専用</p>
-                <p class="card-caption-url"><a class="url-link" href="https://keitan.herokuapp.com" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-            <img src="./images/Twitter_Logo_WhiteOnBlue.png" alt="" width=100% class="card-image">
-              <figcaption class="card-caption">
-                <p class="card-caption-title">Last Tweet Viewer</p>
-                <p class="card-caption-info">12/2018 - 過去100ツイート目のツイート情報が見れるサービス。</p>
-                <p class="card-caption-url"><a class="url-link" href="https://last-tweet-viewer.herokuapp.com" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-          <figure class="card">
-          			<img src="https://stickershop.line-scdn.net/stickershop/v1/product/6863891/LINEStorePC/main.png" alt="" width=100% class="card-image">
+    <h1>Work</h1>
+    <div class="inner">
+      <div class="card-wrapper">
+        <figure class="card">
+          <img src="./images/yasashiikakumeilab.jpg" alt="" width=100% class="card-image">
           <figcaption class="card-caption">
-                <p class="card-caption-title">エンジニアの日常</p>
-                <p class="card-caption-info">3/2019 - 一番最初に作ったLINEスタンプ</p>
-                <p class="card-caption-url"><a class="url-link" href="https://line.me/S/sticker/6863891" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-          			<img src="./images/noimage.png" alt="" width=100% class="card-image">
-              <figcaption class="card-caption">
-                <p class="card-caption-title">「ポ」「プ」「テ」「ピ」「ッ」「ク」をランダムに出力して「ポプテピピック」が完成したら竹●房を破壊するJavaScript</p>
-                <p class="card-caption-info">3/2018 - Twitterで同志が集まって作ったもの</p>
-                <p class="card-caption-url"><a class="url-link" href="https://toliner.github.io/gen_pptp/" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-              <img src="./images/Discord-Logo-Color.svg" alt="" width=100% class="card-image">
-              <figcaption class="card-caption">
-                <p class="card-caption-title">Discord BOT</p>
-                <p class="card-caption-info">11/2018 - 色々なサーバーで動いているDiscordBOT。それぞれのサーバーに合わせて個別に作ってる。</p>
-                <p class="card-caption-url"><a class="url-link" href="https://github.com/0505Keitan/DiscordBot" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-              <img src="./images/twitcasting.jpg" alt="" width=100% class="card-image">
-              <figcaption class="card-caption">
-                <p class="card-caption-title">Twitcasting-Discord-Commenter</p>
-                <p class="card-caption-info">3/2019 - Discordからツイキャスにコメントを投稿できるシステム。</p>
-                <p class="card-caption-url"><a class="url-link" href="https://github.com/0505Keitan/twitcasting-discord-commenter" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <div align="center">
-      <h1>所属</h1>
-  </div>
-  <section class="section" id="works">
-        <div class="inner">
+            <p class="card-caption-title">やさしいかくめいラボツイートクライアント</p>
+            <p class="card-caption-info">05/2019 - やさしいかくめいラボ運営用のツイートクライアント</p>
+            <p class="card-caption-url"><a class="url-link" href="https://twitter.com/yasashikakumei" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="./images/Twitter_Logo_WhiteOnBlue.png" alt="" width=100% class="card-image">
+          <figcaption class="card-caption">
+            <p class="card-caption-title">Tweet Media Viewer</p>
+            <p class="card-caption-info">04/2019 - ツイートの動画を簡単にダウンロードできるサービス。iOSはショートカットだけで利用可能。APIも提供中</p>
+            <p class="card-caption-url"><a class="url-link" href="https://tweet-media-viewer.herokuapp.com" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="./images/ar.png" alt="" width=100% class="card-image">
+          <figcaption class="card-caption">
+            <p class="card-caption-title">AR Web Viewer Sample</p>
+            <p class="card-caption-info">06/2019 - iPhoneでスキャンした3DデータをWebでみれるやつ。iOS12〜専用</p>
+            <p class="card-caption-url"><a class="url-link" href="https://keitan.herokuapp.com" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="./images/Twitter_Logo_WhiteOnBlue.png" alt="" width=100% class="card-image">
+          <figcaption class="card-caption">
+            <p class="card-caption-title">Last Tweet Viewer</p>
+            <p class="card-caption-info">12/2018 - 過去100ツイート目のツイート情報が見れるサービス。</p>
+            <p class="card-caption-url"><a class="url-link" href="https://last-tweet-viewer.herokuapp.com" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+        <figure class="card">
+    			<img src="https://stickershop.line-scdn.net/stickershop/v1/product/6863891/LINEStorePC/main.png" alt="" width=100% class="card-image">
+          <figcaption class="card-caption">
+            <p class="card-caption-title">エンジニアの日常</p>
+            <p class="card-caption-info">3/2019 - 一番最初に作ったLINEスタンプ</p>
+            <p class="card-caption-url"><a class="url-link" href="https://line.me/S/sticker/6863891" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+        <figure class="card">
+    			<img src="./images/noimage.png" alt="" width=100% class="card-image">
+          <figcaption class="card-caption">
+            <p class="card-caption-title">「ポ」「プ」「テ」「ピ」「ッ」「ク」をランダムに出力して「ポプテピピック」が完成したら竹●房を破壊するJavaScript</p>
+            <p class="card-caption-info">3/2018 - Twitterで同志が集まって作ったもの</p>
+            <p class="card-caption-url"><a class="url-link" href="https://toliner.github.io/gen_pptp/" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="./images/Discord-Logo-Color.svg" alt="" width=100% class="card-image">
+          <figcaption class="card-caption">
+            <p class="card-caption-title">Discord BOT</p>
+            <p class="card-caption-info">11/2018 - 色々なサーバーで動いているDiscordBOT。それぞれのサーバーに合わせて個別に作ってる。</p>
+            <p class="card-caption-url"><a class="url-link" href="https://github.com/0505Keitan/DiscordBot" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <img src="./images/twitcasting.jpg" alt="" width=100% class="card-image">
+          <figcaption class="card-caption">
+            <p class="card-caption-title">Twitcasting-Discord-Commenter</p>
+            <p class="card-caption-info">3/2019 - Discordからツイキャスにコメントを投稿できるシステム。</p>
+            <p class="card-caption-url"><a class="url-link" href="https://github.com/0505Keitan/twitcasting-discord-commenter" target="_blank">Link</a></p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section" id="works">
+      <h1>所属？</h1>
+      <div class="inner">
           <div class="card-wrapper">
             <figure class="card">
           			<img src="./images/nnn.jpg" alt="" width=100% class="card-image">
@@ -167,17 +137,6 @@
                 <p class="card-caption-url"><a class="url-link" href="https://nnn.ed.jp" target="_blank">Link</a></p>
               </figcaption>
             </figure>
-            <!--
-            <figure class="card">
-          			<img src="./images/noimage.png" alt="" width=100% class="card-image">
-          		</a>
-              <figcaption class="card-caption">
-                <p class="card-caption-title">入江開発室</p>
-                <p class="card-caption-info">6/2018 - サービス開発で生きて行く！</p>
-                <p class="card-caption-url"><a class="url-link" href="https://camp-fire.jp/projects/view/74574" target="_blank">Link</a></p>
-              </figcaption>
-            </figure>
-          -->
             <figure class="card">
             <img src="./images/student-lt.png" alt="" width=100% class="card-image">
               </a>
@@ -193,7 +152,7 @@
               <figcaption class="card-caption">
                 <p class="card-caption-title">ナポアンサーバー</p>
                 <p class="card-caption-info">4/2018 - 国民的マイクラブロガーのナポアンの運営してるサーバー</p>
-                <p class="card-caption-url"><a class="url-link" href="https://discordapp.com/invite/SW3QVh3" target="_blank">Link</a></p>
+                <p class="card-caption-url"><a class="url-link" href="https://discordapp.com/invite/UmP9r8S" target="_blank">Link</a></p>
               </figcaption>
             </figure>
             <figure class="card">
@@ -210,28 +169,22 @@
       </section>
       <section class="section" id="contact">
         <div class="inner">
-          <div class="section-title-block">
-            <h1>連絡先</h1>
-            <p class="section-desc">
-              お問合わせはSNSか以下のフォームからお願いします。
-            </p>
-          </div>
-          <div align="center">
-            <div class="contact-list">
-                <a href="https://twitter.com/0505Keitan" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="mailto:contact@0505Keitan.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            </div>
+            <h1>連絡</h1>
             <br>
+            <div class="contact">
             <form action="https://keitan.herokuapp.com/app/send.php" method="post">
-              <input type="hidden" name="send" value="home">
               <p>お名前</p><input type="text" name="name" required>
               <p>E-mail</p><input type="email" name="mail" required>
               <p>内容</p><textarea name="content" cols="50" rows="5" required></textarea>
+              <div class="g-recaptcha" data-callback="callback" data-sitekey="6Ld11LAUAAAAAKxyPaPVcuBC3n8UTX2hG2Si6NjF"></div>
               <br>
-              <input type="submit" value="送信">
+              <input type="submit" name="button" value="送信" class="submit" disabled>
             </form>
           </div>
-        </div>
+            <script>
+            function callback(code){if(code!==""){$(':submit[name=button]').removeAttr("disabled");}}
+          </script>
+          </div>
       </section>
 </body>
 </html>
