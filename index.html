@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104906538-15"></script>
     <script src="https://www.google.com/recaptcha/api.js?hl=ja" async="async" defer="defer"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <meta name="viewport" content="width=device-width">
-    <meta charset="utf-8">
     <title>0505Keitan</title>
     <link rel="icon" type="image/png" href="./images/0505Keitan.png">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script>
-    window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#1d8a8a"},"button":{"background":"#62ffaa"}},"theme":"classic","position":"bottom-left","content":{"message":"当サイトでは、アクセス解析のためCookieを利用しています。","dismiss":"OK","link":"詳しく","href":"./cookie.html"}})});
     window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-104906538-15');
     console.info('made by 0505Keitan. v2.3');
     </script>
@@ -32,6 +30,7 @@
         <li><a href="https://about.0505Keitan.com">About</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="index-en.html">English</a></li>
+        <li><a href="cookie.html">Cookieについて</a></li>
       </ul>
     </nav>
     <br>
@@ -175,7 +174,7 @@
             <form action="https://keitan.herokuapp.com/app/send.php" method="post">
               <p>お名前</p><input type="text" name="name" required>
               <p>E-mail</p><input type="email" name="mail" required>
-              <p>内容</p><textarea name="content" cols="50" rows="5" required></textarea>
+              <p>内容</p><textarea name="content" cols="30" rows="5" required></textarea>
               <div class="g-recaptcha" data-callback="callback" data-sitekey="6Ld11LAUAAAAAKxyPaPVcuBC3n8UTX2hG2Si6NjF"></div>
               <br>
               <input type="submit" name="button" value="送信" class="submit" disabled>
