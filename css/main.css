@@ -16,7 +16,8 @@ body {
 
 a {
   color: #1ca9e3;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 #top {
   /*width: 100%;*/
@@ -267,11 +268,17 @@ p .profile {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
+.contact {
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 ul, li {
   list-style: none; }
 
 form {
-  padding: 100px 80px;
+  width: 100%;
 }
 
 form p {
@@ -279,7 +286,7 @@ form p {
 }
 
 input, textarea {
-  width: 400px;
+  width: 100%;
   margin: 10px 0 30px 0;
   padding: 20px;
   font-size: 18px;
@@ -287,8 +294,9 @@ input, textarea {
 }
 
 .submit {
-  margin: 0 10px 5px;
+  margin: 10px 0 30px 0;
   font-size: 20px;
+  width: 100%;
 }
 
 @media screen and (max-width: 480px) {
