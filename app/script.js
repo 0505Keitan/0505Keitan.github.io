@@ -31,6 +31,10 @@ setTimeout(function() {
   var wrapperDom = $("<div></div>", {
     id: "comets"
   });
+  var setupedTextDom = $("<p></p>", {
+    addClass: "status"
+  }).text("comets is ready");
+  wrapperDom.append(setupedTextDom);
 
   if ($(".punch-full-screen-element").length) {
     $(".punch-full-screen-element").append(wrapperDom);
