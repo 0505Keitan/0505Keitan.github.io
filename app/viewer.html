@@ -8,6 +8,7 @@
   <script>
   const watchword = 'opencampus2019-tachikawa';
   var downloadtxt = [];
+  var o = 0;
 
   setTimeout(function() {
     var config = {
@@ -38,6 +39,8 @@
         })
         .html('<input type="checkbox" value="'+id+'">'+getNow()+'：'+commentText);
         $("#comets").append(commentDom);
+        o++;
+        document.title = '( '+o+' )';
         downloadtxt.push(commentText);
       });
     });
