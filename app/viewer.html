@@ -53,11 +53,9 @@
   }
 
   function handleDownload() {
-    downloadtxt = downloadtxt.replace(',','\n');
     var blob = new Blob([ downloadtxt ], { "type" : "text/plain" });
     if(window.navigator.msSaveBlob){
       window.navigator.msSaveBlob(blob, "output.txt"); 
-      // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
       window.navigator.msSaveOrOpenBlob(blob, "output.txt"); 
     }else{
       var url = window.URL.createObjectURL(blob);
