@@ -7,6 +7,7 @@
   <title>コメントビュー</title>
   <script>
   const watchword = 'opencampus2019-tachikawa';
+  var downloadtxt = [];
 
   setTimeout(function() {
     var config = {
@@ -35,8 +36,9 @@
           id: id,
           class: "box"
         })
-        .html('<input type="checkbox" name="save" value="'+id+'">'+getNow()+'：'+commentText);
+        .html('<input type="checkbox" value="'+id+'">'+getNow()+'：'+commentText);
         $("#comets").append(commentDom);
+        downloadtxt.push(commentText);
       });
     });
   }, 1000);
@@ -48,6 +50,19 @@
     var sec = now.getSeconds();
     var s = hour + ":" + min + ":" + sec;
     return s;
+  }
+
+  function handleDownload() {
+    var blob = new Blob([ downloadtxt ], { "type" : "text/plain" });
+    if(window.navigator.msSaveBlob){
+      window.navigator.msSaveBlob(blob, "test.txt"); 
+      // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
+      window.navigator.msSaveOrOpenBlob(blob, "test.txt"); 
+    }else{
+      var url = window.URL.createObjectURL(blob);
+      document.getElementById("download").href = url;
+      url.revokeObjectURL(url);
+    }
   }
   </script>
   <style>
