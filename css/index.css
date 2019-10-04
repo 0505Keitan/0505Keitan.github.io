@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Abel|Kosugi+Maru|Dosis|Marmelad&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel");
 @import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 @import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
 * {
@@ -245,6 +245,7 @@ p .profile {
   font-weight: bold;
   font-size: 18px;
   padding: 0 20px;
+  font-family: 'Marmelad', sans-serif;
 }
 #gnav li:last-child {
   margin-right: 0;
@@ -263,6 +264,7 @@ form {
 }
 form p {
   font-family: 'Kosugi Maru', sans-serif;
+  font-size: 20px;
 }
 
 input, textarea {

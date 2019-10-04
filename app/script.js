@@ -31,16 +31,12 @@ setTimeout(function() {
   var wrapperDom = $("<div></div>", {
     id: "comets"
   });
-  var setupedTextDom = $("<p></p>", {
-    addClass: "status"
-  }).text("comets is ready");
 
   if ($(".punch-full-screen-element").length) {
     $(".punch-full-screen-element").append(wrapperDom);
   } else {
     $("body").append(wrapperDom);
   }
-  wrapperDom.append(setupedTextDom);
 
   wrapperReset = function() {
     setTimeout(function() {
@@ -77,6 +73,22 @@ setTimeout(function() {
     dbref.on("child_added", commentSnapShot => {
       var commentText = commentSnapShot.val().text;
       var id = commentSnapShot.key;
+
+      //禁止用語BANシステム
+      var word = [
+        "死ね",
+        "消えろ",
+        "fuck",
+        "FUCK",
+        "Fuck",
+        "FUck",
+        "FUCk",
+        "🖕",
+        "バカ",
+        "殺"
+      ];
+      if(word.indexOf(commentText) >= 0)return;
+
       var commentDom = $("<p></p>", {
         addClass: "comment",
         id: id
@@ -93,10 +105,6 @@ setTimeout(function() {
         10000,
         id
       );
-    });
-
-    dbref.push({
-      text: "comets setup done!"
     });
   });
 }, 1000);
