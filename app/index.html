@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja"><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
+
+    <title>comment</title>
+    <link href="files/bootstrap.css" rel="stylesheet">
+    <link href="files/font-awesome.css" rel="stylesheet">
+    <link href="files/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="files/sdk_002.js" async="" crossorigin="anonymous"></script><script src="files/jquery.js"></script>
+    <script src="files/jquery_002.js"></script>
+    <script src="files/bootstrap.js"></script>
+    <script src="files/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: " AIzaSyBczL_oF3BT4HuTXDOsihatdxOTEpNMU8U",
+        authDomain: "kakeibo-0505keitan.firebaseapp.com",
+        databaseURL: "https://kakeibo-0505keitan.firebaseio.com",
+        projectId: "kakeibo-0505keitan",
+        storageBucket: "kakeibo-0505keitan.appspot.com",
+        messagingSenderId: "161060563071"
+      };
+      firebase.initializeApp(config);
+    </script></head>
+
+  <body>
+    <div class="comment" id="js_comment">
+        <input type="text" id="js_inputWatchword" style="display:none;" placeholder="comets" value="opencampus2019-tachikawa">
+      <h3>テキストで送信</h3>
+      <p>
+        <input type="text" id="js_inputText" placeholder="なるほど！">
+        <input type="submit" class="btn btn-primary" id="js_submitBtn" value="送信">
+      </p>
+      <h3>ボタンで送信</h3>
+      <button class="btn btn-primary js_btn">いいね！</button>
+      <button class="btn btn-primary js_btn">💩</button>
+    </div>
+
+    <footer>
+      <p>
+        forked from
+        <a href="http://twitter.com/nabettu" target="_blank">nabettu</a>
+      </p>
+    </footer>
+    <script src="files/script.js" type="text/javascript"></script>
+  
+
+</div></div></div></body></html>
