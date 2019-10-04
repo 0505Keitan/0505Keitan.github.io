@@ -8,57 +8,7 @@
   <script>
   const watchword = 'opencampus2019-tachikawa';
 
-    var config = {
-      apiKey: " AIzaSyBczL_oF3BT4HuTXDOsihatdxOTEpNMU8U",
-      authDomain: "kakeibo-0505keitan.firebaseapp.com",
-      databaseURL: "https://kakeibo-0505keitan.firebaseio.com",
-      projectId: "kakeibo-0505keitan",
-      storageBucket: "kakeibo-0505keitan.appspot.com",
-      messagingSenderId: "161060563071"
-    };
-    if(!firebase.apps.length){
-      firebase.initializeApp(config);
-      firebase.auth().signInAnonymously();
-    }else{
-      alert("すでに別なfirebaseアプリが定義されているためcommentを利用出来ません");
-    }
-    var dbref = firebase.database().ref("comment/" + watchword);
-    dbref.set(null).then(e => {
-      dbref.on("child_added", commentSnapShot => {
-        var commentText = commentSnapShot.val().text;
-        var id = commentSnapShot.key;
-        var word = ['いいね！', 'なるほど！', 'N高行きたい！', '立川キャンパスに行きたい！', '8888888888', '草'];
-        if(word.indexOf(commentText) >= 0)return;
-        var commentDom = $("<p></p>", {
-          id: id,
-          class: "box"
-        })
-        .html('<input type="checkbox" name="save" value="'+id+'">'+getNow()+'：'+commentText);
-        $("#comets").append(commentDom);
-      });
-    });
-    //ページを読み込んだら、チェックボックスにクッキーの値を反映する
-    if($.cookie("save_comment")){
-      var load_values = $.cookie("save_comment").split(",");
-      for(var i = 0; i < load_values.length; ++i){
-        load_values[i] = decodeURIComponent(load_values[i]);
-      }
-      $("input[type=checkbox][name=save]").each(function(){
-        this.checked = $.inArray(this.value, load_values) != -1;
-      });
-    }
-    //チェックを変えたらクッキーを保存するイベントを登録する
-    $("input[type=checkbox][name=save]").change(function(){
-      var save_values = [];
-      $("input[type=checkbox][name=save]").each(function(){
-        this.checked && save_values.push(encodeURIComponent(this.value));
-      });
-      $.cookie("save_comment", save_values.join(","));
-    });
-  
-
   setTimeout(function() {
-    /*
     var config = {
       apiKey: " AIzaSyBczL_oF3BT4HuTXDOsihatdxOTEpNMU8U",
       authDomain: "kakeibo-0505keitan.firebaseapp.com",
@@ -73,7 +23,6 @@
     }else{
       alert("縺吶〒縺ｫ蛻･縺ｪfirebase繧｢繝励Μ縺悟ｮ夂ｾｩ縺輔ｌ縺ｦ縺�ｋ縺溘ａcomets繧貞茜逕ｨ蜃ｺ譚･縺ｾ縺帙ｓ");
     }
-    */
     
     var dbref = firebase.database().ref("comment/" + watchword);
     dbref.set(null).then(e => {
