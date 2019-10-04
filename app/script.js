@@ -33,7 +33,7 @@ setTimeout(function() {
   });
   var setupedTextDom = $("<p></p>", {
     addClass: "status"
-  }).text("comets is ready");
+  }).text("comment is ready");
   wrapperDom.append(setupedTextDom);
 
   if ($(".punch-full-screen-element").length) {
