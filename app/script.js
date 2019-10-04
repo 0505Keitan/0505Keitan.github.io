@@ -18,7 +18,7 @@ setTimeout(function() {
     firebase.initializeApp(config);
     firebase.auth().signInAnonymously();
   } else {
-    alert("縺吶〒縺ｫ蛻･縺ｪfirebase繧｢繝励Μ縺悟ｮ夂ｾｩ縺輔ｌ縺ｦ縺�ｋ縺溘ａcomets繧貞茜逕ｨ蜃ｺ譚･縺ｾ縺帙ｓ");
+    alert("すでに別なfirebaseアプリが定義されているためcommentを利用出来ません");
   }
 
   var cssfile = $("<link>", {
