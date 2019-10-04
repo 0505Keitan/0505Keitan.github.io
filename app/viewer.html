@@ -7,6 +7,28 @@
   <title>コメントビュー</title>
   <script>
   const watchword = 'opencampus2019-tachikawa';
+
+  window.onload = function () {
+    //ページを読み込んだら、チェックボックスにクッキーの値を反映する
+    if($.cookie("save_comment")){
+      var load_values = $.cookie("save_comment").split(",");
+      for(var i = 0; i < load_values.length; ++i){
+        load_values[i] = decodeURIComponent(load_values[i]);
+      }
+      $("input[type=checkbox][name=save]").each(function(){
+        this.checked = $.inArray(this.value, load_values) != -1;
+      });
+    }
+    //チェックを変えたらクッキーを保存するイベントを登録する
+    $("input[type=checkbox][name=save]").change(function(){
+      var save_values = [];
+      $("input[type=checkbox][name=save]").each(function(){
+        this.checked && save_values.push(encodeURIComponent(this.value));
+      });
+      $.cookie("save_comment", save_values.join(","));
+    });
+  }
+
   setTimeout(function() {
     var config = {
       apiKey: " AIzaSyBczL_oF3BT4HuTXDOsihatdxOTEpNMU8U",
@@ -34,7 +56,7 @@
           id: id,
           class: "box"
         })
-        .html(getNow()+'：'+commentText);
+        .html('<input type="checkbox" name="save" value="'+id+'">'+getNow()+'：'+commentText);
         $("#comets").append(commentDom);
       });
     });
