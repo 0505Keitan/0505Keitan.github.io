@@ -34,8 +34,8 @@
           id: id,
           class: "box"
         })
-        .text(commentText);
-        $("#comets").append(getNow()+'：'+commentDom);
+        .text(getNow()+'：'+commentText);
+        $("#comets").append(commentDom);
       });
     });
   }, 1000);
@@ -45,7 +45,7 @@
     var hour = now.getHours();
     var min = now.getMinutes();
     var sec = now.getSeconds();
-    var s = hour + ":" + min + ":" + sec + ":";
+    var s = hour + ":" + min + ":" + sec;
     return s;
   }
   </script>
