@@ -53,11 +53,12 @@
   }
 
   function handleDownload() {
+    downloadtxt = downloadtxt.replace(',','\n');
     var blob = new Blob([ downloadtxt ], { "type" : "text/plain" });
     if(window.navigator.msSaveBlob){
-      window.navigator.msSaveBlob(blob, "test.txt"); 
+      window.navigator.msSaveBlob(blob, "output.txt"); 
       // msSaveOrOpenBlobの場合はファイルを保存せずに開ける
-      window.navigator.msSaveOrOpenBlob(blob, "test.txt"); 
+      window.navigator.msSaveOrOpenBlob(blob, "output.txt"); 
     }else{
       var url = window.URL.createObjectURL(blob);
       document.getElementById("download").href = url;
@@ -75,7 +76,7 @@
   </style>
 </head>
 <body>
-  <a id="download" href="#" download="test.txt" onclick="handleDownload()">ダウンロード</a>
+  <a id="download" href="#" download="output.txt" onclick="handleDownload()">ダウンロード</a>
   <div id="comets"></div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
