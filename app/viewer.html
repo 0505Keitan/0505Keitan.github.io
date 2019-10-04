@@ -22,6 +22,8 @@
         dbref.on("child_added", commentSnapShot => {
           var commentText = commentSnapShot.val().text;
           var id = commentSnapShot.key;
+          var word = ['いいね！', 'なるほど！', '行きたい！', '立川行きたい', '草'];
+          if(word.indexOf(commentText) >= 0)return;
           var commentDom = $("<p></p>", {
             id: id
           })
