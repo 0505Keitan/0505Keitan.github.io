@@ -35,10 +35,19 @@
           class: "box"
         })
         .text(commentText);
-        $("#comets").append(commentDom);
+        $("#comets").append(getNow()+'：'+commentDom);
       });
     });
   }, 1000);
+
+  function getNow() {
+    var now = new Date();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+    var s = hour + ":" + min + ":" + sec + ":";
+    return s;
+  }
   </script>
   <style>
   .box {
