@@ -1,0 +1,38 @@
+<script>
+    const watchword = 'opencampus2019-tachikawa';
+    
+    setTimeout(function() {
+      var config = {
+            apiKey: " AIzaSyBczL_oF3BT4HuTXDOsihatdxOTEpNMU8U",
+            authDomain: "kakeibo-0505keitan.firebaseapp.com",
+            databaseURL: "https://kakeibo-0505keitan.firebaseio.com",
+            projectId: "kakeibo-0505keitan",
+            storageBucket: "kakeibo-0505keitan.appspot.com",
+            messagingSenderId: "161060563071"
+          };
+      if (!firebase.apps.length) {
+        firebase.initializeApp(config);
+        firebase.auth().signInAnonymously();
+      } else {
+        alert("縺吶〒縺ｫ蛻･縺ｪfirebase繧｢繝励Μ縺悟ｮ夂ｾｩ縺輔ｌ縺ｦ縺�ｋ縺溘ａcomets繧貞茜逕ｨ蜃ｺ譚･縺ｾ縺帙ｓ");
+      }
+    
+      var dbref = firebase.database().ref("comment/" + watchword);
+      dbref.set(null).then(e => {
+        dbref.on("child_added", commentSnapShot => {
+          var commentText = commentSnapShot.val().text;
+          var id = commentSnapShot.key;
+          var commentDom = $("<p></p>", {
+            id: id
+          })
+            .text(commentText);
+          $("#comets").append(commentDom);
+        });
+      });
+    }, 1000);
+    </script>
+    <body>
+      <div id="comets"></div>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    </body>
