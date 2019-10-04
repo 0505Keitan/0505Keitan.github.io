@@ -58,9 +58,7 @@
       window.navigator.msSaveBlob(blob, "output.txt"); 
       window.navigator.msSaveOrOpenBlob(blob, "output.txt"); 
     }else{
-      var url = window.URL.createObjectURL(blob);
-      document.getElementById("download").href = url;
-      url.revokeObjectURL(url);
+      document.getElementById("download").href = window.URL.createObjectURL(blob);
     }
   }
   </script>
