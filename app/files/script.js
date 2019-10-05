@@ -22,10 +22,15 @@ $(function() {
       "ちんちん",
       "バーカ",
       "イキリト",
-      "💩"
+      "💩",
+      "クズ",
+      "ブリブリ",
+      "無能",
+      "弁護士",
+      "ゆゆうた"
     ];
 
-    if(word.indexOf($("#js_inputText").val()) >= 0)return;
+    if(word.indexOf($("#js_inputText").val()) >= 0){window.alert("禁止されている言葉が含まれています。");$("#js_inputText").val("");return;}
     sendComment($("#js_inputText").val(), $("#js_inputWatchword").val());
   });
 
