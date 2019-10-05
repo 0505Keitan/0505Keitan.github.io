@@ -7,11 +7,38 @@ $(function() {
   }
 
   $("#js_submitBtn").on("click", function() {
+    //禁止用語BANシステム
+    var word = [
+      "死ね",
+      "消えろ",
+      "fuck",
+      "FUCK",
+      "Fuck",
+      "FUck",
+      "FUCk",
+      "🖕",
+      "バカ",
+      "殺",
+      "ちんちん",
+      "バーカ",
+      "イキリト",
+      "💩"
+    ];
+
+    if(word.indexOf(commentText) >= 0)return;
     sendComment($("#js_inputText").val(), $("#js_inputWatchword").val());
   });
 
   $(".js_btn").on("click", function() {
     sendComment($(this).text(), $("#js_inputWatchword").val());
+    $(".js_btn").prop("disabled", true);
+    $(".alert").text("2秒に一回押せます。");
+    // 3秒後に元に戻す
+    setTimeout(function() {
+      $(".alert").text("");
+      $(".js_btn").prop("disabled", false);
+    }, 2000);
+    
   });
 
   function sendComment(text, watchword) {

@@ -78,21 +78,6 @@ setTimeout(function() {
       var commentText = commentSnapShot.val().text;
       var id = commentSnapShot.key;
 
-      //禁止用語BANシステム
-      var word = [
-        "死ね",
-        "消えろ",
-        "fuck",
-        "FUCK",
-        "Fuck",
-        "FUck",
-        "FUCk",
-        "🖕",
-        "バカ",
-        "殺"
-      ];
-      if(word.indexOf(commentText) >= 0)return;
-
       var commentDom = $("<p></p>", {
         addClass: "comment",
         id: id
