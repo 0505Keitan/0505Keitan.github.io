@@ -25,7 +25,7 @@ $(function() {
       "💩"
     ];
 
-    if(word.indexOf(commentText) >= 0)return;
+    if(word.indexOf($("#js_inputText").val()) >= 0)return;
     sendComment($("#js_inputText").val(), $("#js_inputWatchword").val());
   });
 
