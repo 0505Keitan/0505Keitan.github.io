@@ -1,5 +1,7 @@
 timerID = setInterval('clock()',0.01); //0.00001秒毎にclock()を実行
 
+var i = function(n){return('0'+n).slice(-2);}
+
 function clock() {
 	document.getElementById("view_year").innerHTML = getyear();
 	document.getElementById("view_month").innerHTML = getmon();
@@ -82,14 +84,14 @@ function geth() {
 function getmin() {
 	var now = new Date();
 	var min = now.getMinutes();
-	var m = min + "分";
+	var m = i(min) + "分";
 	return m;
 }
 
 function getsec() {
 	var now = new Date();
 	var sec = now.getSeconds();
-	var s = sec + "秒";
+	var s = i(sec) + "秒";
 	return s;
 }
 
