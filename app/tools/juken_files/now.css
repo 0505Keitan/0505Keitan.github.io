@@ -1,5 +1,5 @@
 body {
-    font-size: 16px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .header {
@@ -23,28 +23,16 @@ span {
     font-size: 25px;
 }
 
+.hour {
+    font-size: 2em;
+}
+
 .hours {
     font-size: 5em;
 }
 
 .days {
-    font-size: 3em;
-}
-
-.post_btn {
-    display: inline-block;
-    padding: 4.8px 16px;
-    text-decoration: none;
-    background: #FFF;
-    color: #67c5ff;
-    border: solid 2px #67c5ff;
-    border-radius: 3px;
-    transition: .4s;
-}
-
-.post_btn:hover {
-    background: #67c5ff;
-    color: white;
+    font-size: 8em;
 }
 
 .view {
@@ -54,7 +42,8 @@ width: 100%;
 }
 
 .title {
-    font-size: 3em;
+    font-size: 5em;
+    color: #a7a7a7;
 }
 
 @media screen and (max-width: 860px) {
