@@ -1,18 +1,19 @@
 setInterval('clock()',500); //0.5秒毎にclock()を実行
 
 let i = (n) => ('0' + n).slice(-2);
+let display = (n, e) => document.getElementById(n).innerText = e;
 
 function clock() {
-    document.getElementById("now_year").innerText = year();
-    document.getElementById("view_day").innerText = day();
-    document.getElementById("view_hour").innerText = hour(year()+"/12/31 23:59:59");
-    document.getElementById("view_min").innerText = min(year()+"/12/31 23:59:59");
-    document.getElementById("view_sec").innerText = sec(year()+"/12/31 23:59:59");
+    display("now_year", year());
+    display("view_day", day());
+    display("view_hour", hour(year()+"/12/31 23:59:59"));
+    display("view_min", min(year()+"/12/31 23:59:59"));
+    display("view_sec", sec(year()+"/12/31 23:59:59"));
 }
 
 function year() {
-	var now = new Date();
-	var year = now.getFullYear();
+	let now = new Date();
+	let year = now.getFullYear();
 	return year;
 }
 
@@ -25,29 +26,29 @@ function day() {
 }
 
 function hour(date) {
-    var now = new Date();
-    var anyDate = new Date(date);//カウントダウンしたい日
-    var ms = anyDate - now;//日数を計算
-    var ha = Math.floor(ms / 3600000);//時間を取得
-    var haa = ha % 24;
+    let now = new Date();
+    let anyDate = new Date(date);//カウントダウンしたい日
+    let ms = anyDate - now;//日数を計算
+    let ha = Math.floor(ms / 3600000);//時間を取得
+    let haa = ha % 24;
     return haa;
 }
 
 function min(date) {
-    var now = new Date();
-    var anyDate = new Date(date);//カウントダウンしたい日
-    var ms = anyDate - now;//日数を計算
-    var ha = Math.floor(ms / 3600000);//時間を取得
-    var ma = Math.floor((ms - ha * 3600000) / 60000);//分を取得
+    let now = new Date();
+    let anyDate = new Date(date);//カウントダウンしたい日
+    let ms = anyDate - now;//日数を計算
+    let ha = Math.floor(ms / 3600000);//時間を取得
+    let ma = Math.floor((ms - ha * 3600000) / 60000);//分を取得
     return i(ma);
 }
 
 function sec(date) {
-    var now = new Date();
-    var anyDate = new Date(date);//カウントダウンしたい日
-    var ms = anyDate - now;//日数を計算
-    var ha = Math.floor(ms / 3600000);//時間を取得
-    var ma = Math.floor((ms - ha * 3600000) / 60000);//分を取得
-    var sa = Math.round((ms - ha * 3600000 - ma * 60000) / 1000);//秒を取得
+    let now = new Date();
+    let anyDate = new Date(date);//カウントダウンしたい日
+    let ms = anyDate - now;//日数を計算
+    let ha = Math.floor(ms / 3600000);//時間を取得
+    let ma = Math.floor((ms - ha * 3600000) / 60000);//分を取得
+    let sa = Math.round((ms - ha * 3600000 - ma * 60000) / 1000);//秒を取得
     return i(sa);
 }

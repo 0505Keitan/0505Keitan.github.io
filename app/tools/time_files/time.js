@@ -1,48 +1,49 @@
 setInterval('clock()',500); //0.5秒毎にclock()を実行
 
 let i = (n) => ('0' + n).slice(-2);
+let display = (n, e) => document.getElementById(n).innerText = e;
 
 function clock() {
-	document.getElementById("view_year").innerHTML = getyear();
-	document.getElementById("view_month").innerHTML = getmon();
-	document.getElementById("view_day").innerHTML = getday();
-	document.getElementById("view_hour").innerHTML = geth();
-	document.getElementById("view_min").innerHTML = getmin();
-	document.getElementById("view_sec").innerHTML = getsec();
+	display("view_year", getyear());
+	display("view_month", getmon());
+	display("view_day", getday());
+	display("view_hour", geth());
+	display("view_min", getmin());
+	display("view_sec", getsec());
 }
 
 function getyear() {
-	var now = new Date();
-	var year = now.getFullYear();
+	let now = new Date();
+	let year = now.getFullYear();
 	return year;
 }
 
 function getmon() {
-	var now = new Date();
-	var mon = now.getMonth()+1;
+	let now = new Date();
+	let mon = now.getMonth()+1;
 	return i(mon);
 }
 
 function getday() {
-	var now = new Date();
-	var day = now.getDate();
+	let now = new Date();
+	let day = now.getDate();
 	return i(day);
 }
 
 function geth() {
-	var now = new Date();
-	var hour = now.getHours();
+	let now = new Date();
+	let hour = now.getHours();
 	return i(hour);
 }
 
 function getmin() {
-	var now = new Date();
-	var min = now.getMinutes();
+	let now = new Date();
+	let min = now.getMinutes();
 	return i(min);
 }
 
 function getsec() {
-	var now = new Date();
-	var sec = now.getSeconds();
+	let now = new Date();
+	let sec = now.getSeconds();
 	return i(sec);
 }
