@@ -21,7 +21,7 @@
 
 	// init number list and storage
 	var numberListAll = [];
-	var maxNumber = 50;
+	var maxNumber =  75;
 	for(var num = 1; num <= maxNumber; num++) {
 		numberListAll.push(num);
 	}
@@ -112,6 +112,23 @@
 	};
 	startButton.click(startClicked); // button
 	startButton.focus();
+	
+	document.addEventListener('keydown', (event) => {
+			if(event.key === 'ArrowDown'){
+				if(isStarted) {
+					stop(null);
+					} else {
+						start();
+					}
+			}else if(event.key === 'ArrowUp'){
+				resetLists();
+				console.info('リセットされました。');
+				pingoNumber.text('00');
+				startButton.prop("disabled", false).css('color', '#333');
+				historiesDiv.empty();
+				startButton.focus();
+			}
+		});
 
 	// init reset button
 	var resetClicked = function() {
