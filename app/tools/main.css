@@ -2,6 +2,10 @@ body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -24,7 +28,7 @@ span {
 }
 
 .hours {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #c3c3c3;
 }
 
@@ -33,11 +37,11 @@ span {
 }
 
 .day {
-    font-size: 10em;
+    font-size: 15em;
 }
 
 .view {
-    margin: auto;
+    margin: 100 0 0 0;
     text-align: center;
     width: 100%;
 }

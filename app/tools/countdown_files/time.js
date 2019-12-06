@@ -11,7 +11,7 @@ function clock() {
 
 function day() {
     let now = new Date();
-    let anyDay = new Date(2020,0,18);
+    let anyDay = new Date(2019,11,31);
     let remainDay = Math.floor((anyDay - now) / (24*60*60*1000));
     remainDay++;
     return i(remainDay);
@@ -19,7 +19,7 @@ function day() {
 
 function hour() {
     var now = new Date();
-    var anyDate = new Date("2020/01/18 09:00:00");//カウントダウンしたい日
+    var anyDate = new Date("2019/12/31 23:59:59");//カウントダウンしたい日
     var ms = anyDate - now;//日数を計算
     var ha = Math.floor(ms / 3600000);//時間を取得
     var haa = ha % 24;
@@ -28,7 +28,7 @@ function hour() {
 
 function min() {
     var now = new Date();
-    var anyDate = new Date("2020/01/18 09:00:00");//カウントダウンしたい日
+    var anyDate = new Date("2019/12/31 23:59:59");//カウントダウンしたい日
     var ms = anyDate - now;//日数を計算
     var ha = Math.floor(ms / 3600000);//時間を取得
     var ma = Math.floor((ms - ha * 3600000) / 60000);//分を取得
@@ -37,7 +37,7 @@ function min() {
 
 function sec() {
     var now = new Date();
-    var anyDate = new Date("2020/01/18 09:00:00");//カウントダウンしたい日
+    var anyDate = new Date("2019/12/31 23:59:59");//カウントダウンしたい日
     var ms = anyDate - now;//日数を計算
     var ha = Math.floor(ms / 3600000);//時間を取得
     var ma = Math.floor((ms - ha * 3600000) / 60000);//分を取得
