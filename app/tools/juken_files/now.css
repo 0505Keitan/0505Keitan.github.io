@@ -23,31 +23,40 @@ span {
     font-size: 25px;
 }
 
-.hour {
-    font-size: 2em;
+.hours {
+    font-size: 1.5em;
+    color: #c3c3c3;
 }
 
-.hours {
+.time {
     font-size: 5em;
 }
 
-.days {
-    font-size: 8em;
+.day {
+    font-size: 10em;
 }
 
 .view {
-margin: auto;
-text-align: center;
-width: 100%;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.view_day {
+    font-size: 5em;
+}
+
+.view_moji {
+    font-size: 2em;
+    color: #c3c3c3;
 }
 
 .title {
     font-size: 5em;
-    color: #a7a7a7;
 }
 
 @media screen and (max-width: 860px) {
-  body {
-width: 100%;
-}
+    body {
+        width: 100%;
+    }
 }
