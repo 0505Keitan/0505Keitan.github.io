@@ -22,6 +22,7 @@ $('#toggleMode').on('click', function() {
         $('body').css('color', '#FFF');
         $('a:link').css('color', 'white');
         $('a:visited').css('color', 'white');
+        $(this).css('color', 'white');
         $(this).html('<i class="fas fa-lightbulb"></i> LightMode');
         isDark=!isDark;
     }else{
@@ -31,6 +32,7 @@ $('#toggleMode').on('click', function() {
         $('body').css('color', '#000');
         $('a:link').css('color', 'black');
         $('a:visited').css('color', 'black');
+        $(this).css('color', 'black');
         $(this).html('<i class="fas fa-moon"></i> DarkMode');
         isDark=!isDark;
     }
