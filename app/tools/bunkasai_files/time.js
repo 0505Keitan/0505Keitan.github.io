@@ -4,22 +4,15 @@ let i = (n) => ('0' + n).slice(-2);
 let display = (n, e) => document.getElementById(n).innerText = e;
 
 function clock() {
-    display("now_year", year());
     display("view_day", day());
-    display("view_hour", hour(year()+"/12/31 23:59:59"));
-    display("view_min", min(year()+"/12/31 23:59:59"));
-    display("view_sec", sec(year()+"/12/31 23:59:59"));
-}
-
-function year() {
-	let now = new Date();
-	let year = now.getFullYear();
-	return year;
+    display("view_hour", hour("2020/4/18 0:00:00"));
+    display("view_min", min("2020/4/18 0:00:00"));
+    display("view_sec", sec("2020/4/18 0:00:00"));
 }
 
 function day() {
     let now = new Date();
-    let anyDay = new Date(year(),11,31);
+    let anyDay = new Date(2020,03,18);
     let remainDay = Math.floor((anyDay - now) / (24*60*60*1000));
     remainDay++;
     return remainDay;
