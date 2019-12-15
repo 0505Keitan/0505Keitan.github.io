@@ -2,10 +2,12 @@ https://0505Keitan.com/index.html
 https://0505Keitan.com/about.html
 https://0505Keitan.com/app/tools/radio.html
 https://0505Keitan.com/app/tools/pass.html
-https://0505Keitan.com/app/tools/nowtime.html
-https://0505Keitan.com/app/tools/year.html
+https://0505Keitan.com/app/tools/time.html
 https://0505Keitan.com/app/tools/permission.html
 https://0505Keitan.com/app/tools/permission-en.html
 https://0505Keitan.com/app/tools/arashi.html
+https://0505Keitan.com/app/tools/countdown.html
+https://0505Keitan.com/app/tools/bunkasai.html
 https://0505Keitan.com/app/kusoapp/reiwa.html
 https://0505Keitan.com/app/kusoapp/nyan.html
+https://0505Keitan.com/blog/
