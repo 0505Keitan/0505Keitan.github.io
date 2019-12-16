@@ -21,7 +21,7 @@
 
 	// init number list and storage
 	var numberListAll = [];
-	var maxNumber =  75;
+	var maxNumber =  18;
 	for(var num = 1; num <= maxNumber; num++) {
 		numberListAll.push(num);
 	}
