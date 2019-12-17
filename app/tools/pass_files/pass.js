@@ -174,7 +174,7 @@ function devalert2() {
 
 function copy1() {
     // コピー対象をJavaScript上で変数として定義する
-    var copyTarget = document.getElementById("password");
+    let copyTarget = document.getElementById("password");
     // コピー対象のテキストを選択する
     copyTarget.select();
     // 選択しているテキストをクリップボードにコピーする
@@ -183,7 +183,7 @@ function copy1() {
 
 function copy2() {
     // コピー対象をJavaScript上で変数として定義する
-    var copyTarget = document.getElementById("password");
+    let copyTarget = document.getElementById("password");
     // コピー対象のテキストを選択する
     copyTarget.select();
     // 選択しているテキストをクリップボードにコピーする

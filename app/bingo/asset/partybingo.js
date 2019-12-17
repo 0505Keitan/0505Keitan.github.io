@@ -1,12 +1,12 @@
 (function(){
-	var pingoNumber = $('#pingo-number');
-	var startButton = $('#start-button');
-	var resetButton = $('#reset-button');
-	var historiesDiv = $('#histories');
-	var initNum = 1;
+	let pingoNumber = $('#pingo-number');
+	let startButton = $('#start-button');
+	let resetButton = $('#reset-button');
+	let historiesDiv = $('#histories');
+	let initNum = 1;
 
 	// init histories
-	var toBingoString = function(n){
+	let toBingoString = function(n){
 		if(n > 9) {
 			return n.toString(10);
 		} else if (n < 0) {
@@ -15,42 +15,42 @@
 			return '0' +  n.toString(10);
 		}
 	};
-	var addHistory = function(n) {
+	let addHistory = function(n) {
 		historiesDiv.append('<div class="col-md-1"><p class="history-number">' + toBingoString(n) + '</p></div>');
 	};
 
 	// init number list and storage
-	var numberListAll = [];
-	var maxNumber =  18;
-	for(var num = 1; num <= maxNumber; num++) {
+	let numberListAll = [];
+	let maxNumber =  18;
+	for(num = 1; num <= maxNumber; num++) {
 		numberListAll.push(num);
 	}
 
-	var storage = localStorage;
-	var listKey = 'partybingo.numberlist';
-	var removedKey = 'partybingo.removedlist';
-	var setNumberList = function(a) {
+	let storage = localStorage;
+	let listKey = 'partybingo.numberlist';
+	let removedKey = 'partybingo.removedlist';
+	let setNumberList = function(a) {
 		storage.setItem(listKey, JSON.stringify(a));
 	};
-	var getNumberList = function() {
+	let getNumberList = function() {
 		return JSON.parse(storage.getItem(listKey));
 	};
-	var setRemovedList = function(a) {
+	let setRemovedList = function(a) {
 		storage.setItem(removedKey, JSON.stringify(a));
 	};
-	var getRemovedList = function() {
+	let getRemovedList = function() {
 		return JSON.parse(storage.getItem(removedKey));
 	};
-	var resetLists = function() {
+	let resetLists = function() {
 		setNumberList(numberListAll.concat());
 		setRemovedList([]);
 	};
 
 	// create initial list or loadHistory
-	var loadedNumberList = getNumberList();
-	var loadedRemovedList = getRemovedList();
+	let loadedNumberList = getNumberList();
+	let loadedRemovedList = getRemovedList();
 	if(loadedNumberList && loadedRemovedList) {
-		for (var i = 0; i < loadedRemovedList.length; i++) {
+		for (i = 0; i < loadedRemovedList.length; i++) {
 			addHistory(loadedRemovedList[i]);
 		}
 	} else {
@@ -58,41 +58,41 @@
 	}
 
 	// create util method
-	var getNumberRamdom = function(){
-		var numberList = getNumberList();
-		var i = Math.floor(Math.random() * numberList.length);
+	let getNumberRamdom = function(){
+		let numberList = getNumberList();
+		let i = Math.floor(Math.random() * numberList.length);
 		return numberList[i];
 	};
-	var removeNumberRamdom = function(){
-		var numberList = getNumberList();
+	let removeNumberRamdom = function(){
+		let numberList = getNumberList();
 		if(numberList.length === 0)return -1;
-		var i = Math.floor(Math.random() * numberList.length);
-		var removed = numberList[i];
+		let i = Math.floor(Math.random() * numberList.length);
+		let removed = numberList[i];
 		numberList.splice(i, 1);
 		setNumberList(numberList);
-		var removedList = getRemovedList();
+		let removedList = getRemovedList();
 		removedList.push(removed);
 		setRemovedList(removedList);
 		return removed;
 	};
 
 	// init start button
-	var isStarted = false;
+	let isStarted = false;
 	function rourletto() {
 		if(isStarted) {
 			pingoNumber.text(toBingoString(getNumberRamdom()));
 			setTimeout(rourletto, 60);
 		}
 	}
-	var stop = function(time) {
+	let stop = function(time) {
 		isStarted = false;
 		startButton.text('Start');
-		var n = removeNumberRamdom();
+		let n = removeNumberRamdom();
 		pingoNumber.text(toBingoString(n));
 		console.log((initNum++)+'回目の結果は「'+n+'」。残り'+String(maxNumber--)+'こ。');
 		addHistory(n);
 	};
-	var start = function(){
+	let start = function(){
 		if(getNumberList().length === 0){
 			pingoNumber.text('終了');
 			startButton.prop("disabled", true).css('color', '#d9d9d9');
@@ -103,7 +103,7 @@
 		startButton.text('Stop');
 		rourletto();
 	};
-	var startClicked = function(e){
+	let startClicked = function(e){
 		if(isStarted) {
 			stop(null);
 		} else {
@@ -112,7 +112,7 @@
 	};
 	startButton.click(startClicked); // button
 	startButton.focus();
-	
+
 	document.addEventListener('keydown', (event) => {
 			if(event.key === 'ArrowDown'){
 				if(isStarted) {
@@ -131,7 +131,7 @@
 		});
 
 	// init reset button
-	var resetClicked = function() {
+	let resetClicked = function() {
 		if (confirm('リセットしてもよろしいですか？')) {
 			resetLists();
 			console.info('リセットされました。');

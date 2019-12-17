@@ -2,7 +2,7 @@ const listen = new webkitSpeechRecognition();
 listen.lang = 'ja-JP';
 listen.interimResults = false;
 listening = false;
-var res = [];
+let res = [];
 
 $('#btn').on('click', function() {
     if (listening) {
@@ -30,9 +30,9 @@ listen.onspeechend = () => {
 listen.onresult = function(e) {
     listen.stop();
     listening = false;
-    var o = [];
+    let o = [];
     if(e.results[0].isFinal){
-        var autotext =  e.results[0][0].transcript
+        let autotext =  e.results[0][0].transcript
         res.push(autotext);
         $('#content').text('形態素解析中...「'+autotext+'」');
         kuromoji.builder({ dicPath: "./dict" }).build(function(e, t){
@@ -55,7 +55,7 @@ listen.onend = () => {
 };
 
 $('#download').on('click', function() {
-    var blob = new Blob([ res.join('\n') ], { "type" : "text/plain" });
+    let blob = new Blob([ res.join('\n') ], { "type" : "text/plain" });
     if(window.navigator.msSaveBlob){ 
         window.navigator.msSaveBlob(blob, "test.txt"); 
         window.navigator.msSaveOrOpenBlob(blob, "test.txt"); 

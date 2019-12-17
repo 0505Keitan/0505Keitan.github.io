@@ -2,7 +2,7 @@ const listen = new webkitSpeechRecognition();
 listen.lang = 'ja-JP';
 listen.interimResults = false;
 listening = false;
-var res = [];
+let res = [];
 
 $('#btn').on('click', function() {
     if (listening) {
@@ -45,10 +45,10 @@ listen.onend = () => {
 
 $('#download').on('click', function() {
     filename = window.prompt("ファイル名を設定してください。", getTime());
-    var blob = new Blob([ res.join('\n') ], { "type" : "text/plain" });
-    if(window.navigator.msSaveBlob){ 
-        window.navigator.msSaveBlob(blob, "test.txt"); 
-        window.navigator.msSaveOrOpenBlob(blob, "test.txt"); 
+    let blob = new Blob([ res.join('\n') ], { "type" : "text/plain" });
+    if(window.navigator.msSaveBlob){
+        window.navigator.msSaveBlob(blob, "test.txt");
+        window.navigator.msSaveOrOpenBlob(blob, "test.txt");
     }else{
         $('#download').attr("href", window.URL.createObjectURL(blob));
         if(filename===null){
@@ -60,11 +60,11 @@ $('#download').on('click', function() {
 });
 
 function getTime() {
-    var today = new Date();
-    var year = today.getFullYear();
-    var month = today.getMonth() + 1;
-    var day = today.getDate();
-    var hour = today.getHours();
-    var min = today.getMinutes();
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+    let hour = today.getHours();
+    let min = today.getMinutes();
     return year+'-'+month+'-'+day+'-'+hour+':'+min;
 }
