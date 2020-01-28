@@ -5,7 +5,7 @@ listening = false;
 let res = [];
 
 $('#btn').on('click', function() {
-    if (listening) {
+    if(listening){
         if(window.confirm('履歴がすべて消えます。よろしいですか？\nもしくはキャンセルしてダウンロードしてください！')){
             location.reload();
             listening = false;
@@ -59,12 +59,12 @@ $('#download').on('click', function() {
     }
 });
 
-function getTime() {
-    let today = new Date();
-    let year = today.getFullYear();
-    let month = today.getMonth() + 1;
-    let day = today.getDate();
-    let hour = today.getHours();
-    let min = today.getMinutes();
+const getTime = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
+    const hour = today.getHours();
+    const min = today.getMinutes();
     return year+'-'+month+'-'+day+'-'+hour+':'+min;
 }

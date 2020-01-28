@@ -1,24 +1,16 @@
 a:link {color: black;}
 a:visited {color: black;}
-
 .container {
     width: 90%;
-    margin: 50px auto;
-}
-
-table{
+    margin: 50px auto; }
+table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 80%;
-    margin: 0 auto;
-}
-
-table tr{
-    border-bottom: solid 1px #eee;
-}
-
-table td{
+    margin: 0 auto; }
+table tr {
+    border-bottom: solid 1px #eee; }
+table td {
     text-align: center;
     width: 25%;
-    padding: 15px 0;
-}
+    padding: 15px 0; }

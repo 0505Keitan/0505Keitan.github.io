@@ -20,10 +20,10 @@ $('#btn').on('click', function() {
     }
 });
 
-listen.onspeechstart = () => { 
+listen.onspeechstart = () => {
     $('#status').text('You talking now!');
 };
-listen.onspeechend = () => {   
+listen.onspeechend = () => {
     $('#status').text('You not talking');
 };
 
