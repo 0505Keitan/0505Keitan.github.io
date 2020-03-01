@@ -1,3 +1,5 @@
 **/.DS_Store
 prepros-6.config
 app/voice-to-text/vc/*
+css/main.css.map
+css/.sass-cache/
