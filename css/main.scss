@@ -1,318 +1,368 @@
-@import url('https://fonts.googleapis.com/css?family=Abel');
-@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
-@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Abel|Kosugi+Maru|Dosis|Marmelad&display=swap");
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
 
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*メイン*/
+
 body {
-    background-color :#e9ffe0;
+    background-color: #e9ffe0;
 }
 
 a {
-  color: #1ca9e3;
-  text-decoration: none;
+    color: #1ca9e3;
+    text-decoration: none;
 }
 
-#top{
-  /*width: 100%;*/
-  height: 480px;
-  background-color: #29ad3e;
-  text-align: center;
-  top: 20%;
+#top {
+    /*width: 100%;*/
+    height: 480px;
+    background-color: #29ad3e;
+    text-align: center;
+    top: 20%;
 }
 
 p .profile {
-  font-family: 'Kosugi Maru', sans-serif;
+    font-family: 'Kosugi Maru', sans-serif;
 }
 
 .top-section {
-  color:#fff;
-  font-size: 60px;
-  font-family: "Abel";
-  padding-top: 160px;
+    color: #fff;
+    font-size: 60px;
+    font-family: "Abel";
+    padding-top: 160px;
 
-  img {
-    border-radius: 80px;
-    width: 160px;
-    border: solid #fff;
-  }
+    img {
+        border-radius: 80px;
+        width: 160px;
+        border: solid #fff;
+    }
 
-  .square_btn{
-      display: inline-block;
-      padding: 0.5em 1em;
-      text-decoration: none;
-      background: #668ad8;/*ボタン色*/
-      color: #FFF;
-      border-bottom: solid 4px #627295;
-      border-radius: 3px;
+    .square_btn {
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #668ad8;
 
-      &:active {/*ボタンを押したとき*/
-          -ms-transform: translateY(4px);
-          -webkit-transform: translateY(4px);
-          transform: translateY(4px);/*下に動く*/
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
-          border-bottom: none;
-      }
-  }
+        /*ボタン色*/
+        color: #FFF;
+        border-bottom: solid 4px #627295;
+        border-radius: 3px;
+
+        &:active {
+            /*ボタンを押したとき*/
+            -ms-transform: translateY(4px);
+            -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+
+            /*下に動く*/
+            -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+
+            /*影を小さく*/
+            border-bottom: none;
+        }
+    }
 }
+
+/* QRエリア */
 
 .box {
     padding: 8px 16px;
     margin: auto;
     font-weight: bold;
-    color: #1ba9e1;/*文字色*/
+    color: #1ba9e1;
+
+    /*文字色*/
     background: #FFF;
-    border: solid 3px #1ba9e1;/*線*/
-    border-radius: 10px;/*角の丸み*/
+    border: solid 3px #1ba9e1;
+
+    /*線*/
+    border-radius: 10px;
+
+    /*角の丸み*/
     width: 25%;
 
     p {
-       margin: 10px;
-       font-size: 30px;
-       font-family: 'Dosis', sans-serif;
-   }
+        margin: 10px;
+        font-size: 30px;
+        font-family: 'Dosis', sans-serif;
+    }
 
-   img {
-     width: 100%;
-     padding: 20px;
-   }
+    img {
+        width: 100%;
+        padding: 20px;
+    }
 }
+
+/* contactbox */
 
 .box-contact {
-  padding: 8px 16px;
-  font-weight: bold;
-  color: #1ba9e1;
-  background: #FFF;
-  border: solid 3px #1ba9e1;
-  border-radius: 10px;
-  width: 50%;
-  margin: 10px;
+    padding: 8px 16px;
+    font-weight: bold;
+    color: #1ba9e1;
+
+    /*文字色*/
+    background: #FFF;
+    border: solid 3px #1ba9e1;
+
+    /*線*/
+    border-radius: 10px;
+
+    /*角の丸み*/
+    width: 50%;
+    margin: 10px;
 }
 
-.fab {
-    font-size: 50px;
-    color: #333;
-}
-
-.fas {
+.fab, .fas {
     font-size: 50px;
     color: #333;
 }
 
 .kusaBox {
-  margin: 10px;
-  font-weight: bold;
-  color: #000;
-  background: #FFF;
-  border: solid 3px #389631;
-  border-radius: 10px;
-  width: 95%;
-  padding: 10px 0 0 20px;
-  font-family: 'Kosugi Maru', sans-serif;
-  .kusa {
-    width: 100%;
-  }
-  .title {
-    margin: 0;
-    padding: 0;
-    font-size: 30px;
-    color: #389631;
-  }
+    margin: 10px;
+    font-weight: bold;
+    color: #000;
+
+    /*文字色*/
+    background: #FFF;
+    border: solid 3px #389631;
+
+    /*線*/
+    border-radius: 10px;
+
+    /*角の丸み*/
+    width: 95%;
+    padding: 10px 0 0 20px;
+    font-family: 'Kosugi Maru', sans-serif;
+
+    .kusa {
+        width: 100%;
+    }
+
+    .title {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        color: #389631;
+    }
+
+    .info {
+        text-align: right;
+        font-size: 12px;
+        padding: 0 20px 5px 0;
+    }
 }
 
 /* p in */
+
 .inner {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .section {
-  .inner {
-    padding: 80px 10px;
-  }
-  .section-title-block {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .section-title {
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: -0.01em;
-    display: inline-block;
-    font-size: 56px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #f39ac7;
-  }
-  .section-desc {
-    text-align: center;
-  }
-  h1 {
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: -0.01em;
-    font-size: 56px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #f39ac7;
-    text-align: center;
-  }
+    .inner {
+        padding: 80px 10px;
+    }
+
+    h1 {
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: -0.01em;
+        font-size: 56px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #f39ac7;
+        text-align: center;
+    }
 }
 
 .two-column-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.two-column-image {
-  width: 33%;
-  img {
+    width: 80%;
     margin: 0 auto;
-  }
-}
-
-.two-column-desc {
-  width: 62%;
-}
-
-#works {
-  .card {
-    width: 32%;
-    margin-bottom: 50px;
-  }
-  .card-image {
-    display: block;
-    margin-bottom: 8px;
-  }
-  .card-caption-title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .card-caption-info {
-    font-size: 15px;
-  }
-  .card-caption-url {
-    font-size: 13px;
-  }
-  .card-wrapper {
     padding: 20px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-  }
+}
+
+.two-column-image {
+    width: 33%;
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+.two-column-desc {
+    width: 62%;
+}
+
+#works {
+    .card {
+        width: 32%;
+        margin-bottom: 50px;
+    }
+
+    .card-image {
+        display: block;
+        margin-bottom: 8px;
+        border-radius: 10%;
+
+        /* 角丸半径を50%にする(=円形にする) */
+        width: 180px;
+
+        /* ※縦横を同値に */
+        height: 180px;
+    }
+
+    .card-caption-title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card-caption-info {
+        font-size: 15px;
+    }
+
+    .card-caption-url {
+        font-size: 13px;
+    }
+
+    .card-wrapper {
+        padding: 20px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
 }
 
 #gnav {
-  padding: 10px;
-  font-family: 'Open sans', sans-serif;
-  z-index: 100;
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0px 5px 32px rgba(100, 100, 100, 0.1);
-  transform: translate3d(0, 0, 0);
-  ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  li {
-    font-weight: bold;
-    font-size: 18px;
-    padding: 0 20px;
-    font-family: 'Marmelad', sans-serif;
-    &:last-child {
-      margin-right: 0;
+    padding: 10px;
+    font-family: 'Open sans', sans-serif;
+    z-index: 100;
+
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
-    a {
-      color: #333;
-      letter-spacing: -0.01em;
+
+    li {
+        font-weight: bold;
+        font-size: 18px;
+        padding: 0 20px;
+        font-family: 'Marmelad', sans-serif;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            color: #333;
+            letter-spacing: -0.01em;
+        }
     }
-  }
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 5px 32px rgba(100, 100, 100, 0.1);
+    box-shadow: 0px 5px 32px rgba(100, 100, 100, 0.1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.contact {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
 ul, li {
-  list-style: none;
+    list-style: none;
 }
 
 form {
-  width: 100%;
-  p {
-    font-family: 'Kosugi Maru', sans-serif;
-    font-size: 20px;
-  }
+    width: 100%;
+
+    p {
+        font-family: 'Kosugi Maru', sans-serif;
+    }
 }
 
 input, textarea {
-  width: 100%;
-  margin: 10px 0 30px 0;
-  padding: 20px;
-  font-size: 18px;
-  border: 1px solid #dee7ec;
+    width: 100%;
+    margin: 10px 0 30px 0;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid #dee7ec;
 }
 
 .submit {
-  margin: 10px 0 30px 0;
-  font-size: 20px;
-  width: 100%;
+    margin: 10px 0 30px 0;
+    font-size: 20px;
+    width: 100%;
 }
 
-@media screen and (max-width: 860px) {
-  #top {
-    height: 120px;
-    background-color: #29ad3e;
-    text-align: center;
-    top: 20%;
-  }
-
-  .top-section {
-    padding-top: 20px;
-    p {
-      display: none;
+@media screen and (max-width: 480px) {
+    #top {
+        height: 120px;
+        background-color: #29ad3e;
+        text-align: center;
+        top: 20%;
     }
 
-    img {
-      width:80px;
-      border-radius: 60px;
-    }
-  }
+    .top-section {
+        padding-top: 20px;
 
-  .box {
-    width: 50%;
-  }
+        p {
+            display: none;
+        }
 
-  #works .card {
-    min-width: 100%;
-    text-align: center;
-    justify-content: center;
-    img {
-      margin: 0 auto;
+        img {
+            width: 80px;
+            border-radius: 60px;
+        }
     }
-  }
+
+    .box {
+        width: 50%;
+    }
+
+    #works .card {
+        min-width: 100%;
+        text-align: center;
+        justify-content: center;
+
+        img {
+            margin: 0 auto;
+        }
+    }
 }
