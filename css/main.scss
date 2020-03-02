@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Abel|Kosugi+Maru|Dosis|Marmelad&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Kosugi+Maru|Dosis|Marmelad|Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 @import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
 
@@ -171,7 +171,7 @@ p .profile {
 
 .section {
     .inner {
-        padding: 80px 10px;
+        padding: 10px 0;
     }
 
     h1 {
@@ -180,8 +180,15 @@ p .profile {
         font-size: 56px;
         font-weight: bold;
         margin-bottom: 10px;
-        color: #f39ac7;
+        color: #757eff;
         text-align: center;
+    }
+
+    .about {
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Roboto Condensed';
+        margin: 60px 0;
     }
 }
 
