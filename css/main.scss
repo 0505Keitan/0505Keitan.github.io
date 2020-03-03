@@ -22,7 +22,6 @@ a {
 }
 
 #top {
-    /*width: 100%;*/
     height: 480px;
     background-color: #29ad3e;
     text-align: center;
@@ -44,124 +43,7 @@ p .profile {
         width: 160px;
         border: solid #fff;
     }
-
-    .square_btn {
-        display: inline-block;
-        padding: 0.5em 1em;
-        text-decoration: none;
-        background: #668ad8;
-
-        /*ボタン色*/
-        color: #FFF;
-        border-bottom: solid 4px #627295;
-        border-radius: 3px;
-
-        &:active {
-            /*ボタンを押したとき*/
-            -ms-transform: translateY(4px);
-            -webkit-transform: translateY(4px);
-            transform: translateY(4px);
-
-            /*下に動く*/
-            -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-
-            /*影を小さく*/
-            border-bottom: none;
-        }
-    }
 }
-
-/* QRエリア */
-
-.box {
-    padding: 8px 16px;
-    margin: auto;
-    font-weight: bold;
-    color: #1ba9e1;
-
-    /*文字色*/
-    background: #FFF;
-    border: solid 3px #1ba9e1;
-
-    /*線*/
-    border-radius: 10px;
-
-    /*角の丸み*/
-    width: 25%;
-
-    p {
-        margin: 10px;
-        font-size: 30px;
-        font-family: 'Dosis', sans-serif;
-    }
-
-    img {
-        width: 100%;
-        padding: 20px;
-    }
-}
-
-/* contactbox */
-
-.box-contact {
-    padding: 8px 16px;
-    font-weight: bold;
-    color: #1ba9e1;
-
-    /*文字色*/
-    background: #FFF;
-    border: solid 3px #1ba9e1;
-
-    /*線*/
-    border-radius: 10px;
-
-    /*角の丸み*/
-    width: 50%;
-    margin: 10px;
-}
-
-.fab, .fas {
-    font-size: 50px;
-    color: #333;
-}
-
-.kusaBox {
-    margin: 10px;
-    font-weight: bold;
-    color: #000;
-
-    /*文字色*/
-    background: #FFF;
-    border: solid 3px #389631;
-
-    /*線*/
-    border-radius: 10px;
-
-    /*角の丸み*/
-    width: 95%;
-    padding: 10px 0 0 20px;
-    font-family: 'Kosugi Maru', sans-serif;
-
-    .kusa {
-        width: 100%;
-    }
-
-    .title {
-        margin: 0;
-        padding: 0;
-        font-size: 30px;
-        color: #389631;
-    }
-
-    .info {
-        text-align: right;
-        font-size: 12px;
-        padding: 0 20px 5px 0;
-    }
-}
-
-/* p in */
 
 .inner {
     max-width: 1320px;
@@ -192,33 +74,7 @@ p .profile {
     }
 }
 
-.two-column-wrapper {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.two-column-image {
-    width: 33%;
-
-    img {
-        margin: 0 auto;
-    }
-}
-
-.two-column-desc {
-    width: 62%;
-}
-
-#works {
+#skills {
     .card {
         width: 32%;
         margin-bottom: 50px;
@@ -228,12 +84,12 @@ p .profile {
         display: block;
         margin-bottom: 8px;
         border-radius: 10%;
-
-        /* 角丸半径を50%にする(=円形にする) */
         width: 180px;
-
-        /* ※縦横を同値に */
         height: 180px;
+    }
+
+    i {
+        font-size: 4.5rem;
     }
 
     .card-caption-title {
@@ -254,11 +110,71 @@ p .profile {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+
+        .skill-card {
+            text-align: center;
+        }
+    }
+}
+
+#works {
+    .card {
+        width: 32%;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .card-image {
+        margin-bottom: 8px;
+        border-radius: 10%;
+        width: 130px;
+        height: 130px;
+    }
+
+    i {
+        font-size: 2.5rem;
+    }
+
+    .card-caption-title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card-caption-info {
+        font-size: 15px;
+    }
+
+    .card-caption-url {
+        font-size: 13px;
+    }
+
+    .card-wrapper {
+        padding: 20px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+
+        .skill-card {
+            text-align: center;
+        }
+    }
+}
+
+#contact {
+    .inner {
+        width: 25%;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    i {
+        font-size: 3.5rem;
+        color: black;
     }
 }
 
@@ -306,36 +222,24 @@ p .profile {
     transform: translate3d(0, 0, 0);
 }
 
-.contact {
-    width: 1170px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
 ul, li {
     list-style: none;
 }
 
-form {
-    width: 100%;
-
-    p {
-        font-family: 'Kosugi Maru', sans-serif;
+@media screen and (max-width: 1200px) {
+    #contact {
+        .inner {
+            width: 50%;
+        }
     }
 }
 
-input, textarea {
-    width: 100%;
-    margin: 10px 0 30px 0;
-    padding: 20px;
-    font-size: 18px;
-    border: 1px solid #dee7ec;
-}
-
-.submit {
-    margin: 10px 0 30px 0;
-    font-size: 20px;
-    width: 100%;
+@media screen and (max-width: 1000px) {
+    #contact {
+        .inner {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -357,10 +261,6 @@ input, textarea {
             width: 80px;
             border-radius: 60px;
         }
-    }
-
-    .box {
-        width: 50%;
     }
 
     #works .card {
