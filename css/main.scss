@@ -10,8 +10,6 @@
     box-sizing: border-box;
 }
 
-/*メイン*/
-
 body {
     background-color: #e9ffe0;
 }
@@ -60,13 +58,14 @@ p .profile {
         font-family: 'Oswald', sans-serif;
         letter-spacing: -0.01em;
         font-size: 56px;
-        font-weight: bold;
         margin-bottom: 10px;
         color: #757eff;
         text-align: center;
     }
+}
 
-    .about {
+#about {
+    p {
         text-align: center;
         font-size: 30px;
         font-family: 'Roboto Condensed';
@@ -111,6 +110,7 @@ p .profile {
         display: -ms-flexbox;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
 
         .skill-card {
             text-align: center;
@@ -118,7 +118,7 @@ p .profile {
     }
 }
 
-#works {
+#products {
     .card {
         width: 32%;
         margin-bottom: 50px;
@@ -156,16 +156,13 @@ p .profile {
         display: -ms-flexbox;
         display: flex;
         flex-wrap: wrap;
-
-        .skill-card {
-            text-align: center;
-        }
+        justify-content: center;
     }
 }
 
 #contact {
     .inner {
-        width: 25%;
+        width: 40%;
         text-align: center;
         padding: 50px;
         display: flex;
@@ -235,6 +232,16 @@ ul, li {
 }
 
 @media screen and (max-width: 1000px) {
+    .section {
+        h1 {
+            font-size: 45px;
+        }
+    }
+    #about {
+        p {
+            margin: 40px 0;
+        }
+    }
     #contact {
         .inner {
             width: 100%;
@@ -244,17 +251,15 @@ ul, li {
 
 @media screen and (max-width: 480px) {
     #top {
-        height: 120px;
-        background-color: #29ad3e;
-        text-align: center;
-        top: 20%;
+        height: 170px;
     }
 
     .top-section {
         padding-top: 20px;
 
         p {
-            display: none;
+            font-size: 40px;
+            margin: -10px 0;
         }
 
         img {
@@ -263,7 +268,7 @@ ul, li {
         }
     }
 
-    #works .card {
+    #products .card {
         min-width: 100%;
         text-align: center;
         justify-content: center;
