@@ -33,12 +33,12 @@ listen.onresult = function(e) {
     listen.stop();
     listening = false;
     if(e.results[0].isFinal){
-        var autotext =  e.results[0][0].transcript
+        var autotext = `${e.results[0][0].transcript}すかね`
         console.log(autotext);
         $('#content').prepend('<div>'+ autotext +'</div>');
         res.push(autotext);
         speech.text = autotext;
-        speechSynthesis.speak(`${speech}すかね`);
+        speechSynthesis.speak(speech);
     }
 }
 
