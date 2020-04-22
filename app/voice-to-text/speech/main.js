@@ -38,7 +38,7 @@ listen.onresult = function(e) {
         $('#content').prepend('<div>'+ autotext +'</div>');
         res.push(autotext);
         speech.text = autotext;
-        speechSynthesis.speak(speech);
+        speechSynthesis.speak(`${speech}すかね`);
     }
 }
 
