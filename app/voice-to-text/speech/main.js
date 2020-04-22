@@ -33,7 +33,7 @@ listen.onresult = function(e) {
     listen.stop();
     listening = false;
     if(e.results[0].isFinal){
-        var autotext = `${e.results[0][0].transcript}すかね`
+        var autotext = e.results[0][0].transcript
         console.log(autotext);
         $('#content').prepend('<div>'+ autotext +'</div>');
         res.push(autotext);
