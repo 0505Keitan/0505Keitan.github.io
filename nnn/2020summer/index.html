@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>おみくじ</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <script src="kekka.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      <span>おみくじ</span>
+    </div>
+    <div class="container">
+      <h2 id="status">きみの名前を入れてね！</h2>
+      <div id="name">
+        <input class="name" type="text" placeholder="ななし" id="names">
+      </div>
+      <div class="roulette" id="result" style="display: none;"> - </div>
+      <div class="button">
+        <button type="button" id="btn" class="btn start" onclick="button()">START</button>
+      </div>
+    </div>
+  </body>
+</html>

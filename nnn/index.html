@@ -1,57 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clock</title>
-    <script src="./js/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-</head>
-<body>
-    <div id="main" class="main">
-        <header>
-            <div class="header-right">
-                <p>Clock</p>
-                <p class="link" onclick="htu()">How to use</p>
-            </div>
-            <div class="header-left">
-                <p>Auto Fonts</p>
-                <input type="checkbox" id="autoF" onchange="autoFont()" checked>
-                <p>Clock Size</p>
-                <input type="range" value="150" min="150" max="200" step="25" oninput="changeSize(value)">
-                <select class="font" onchange="changeFont(value)">
-                    <option selected>Change Fonts</option>
-                    <option value="Roboto" class="fonts"></option>
-                    <option value="Raleway" class="fonts"></option>
-                    <option value="Lexend Deca" class="fonts"></option>
-                    <option value="Lexend Zetta" class="fonts"></option>
-                    <option value="Dosis" class="fonts"></option>
-                    <option value="Anton" class="fonts"></option>
-                    <option value="Teko" class="fonts"></option>
-                    <option value="Play" class="fonts"></option>
-                    <option value="Orbitron" class="fonts"></option>
-                    <option value="Economica" class="fonts"></option>
-                    <option value="Changa" class="fonts"></option>
-                    <option value="Lacquer" class="fonts"></option>
-                    <option value="Allerta Stencil" class="fonts"></option>
-                    <option value="Tenor Sans" class="fonts"></option>
-                    <option value="Pattaya" class="fonts"></option>
-                    <option value="Six Caps" class="fonts"></option>
-                    <option value="Rationale" class="fonts"></  option>
-                    <option value="Notable" class="fonts"></option>
-                </select>
-            </div>
-        </header>
-        <div class="view" id="view">
-            <span id="view_year" class="days"></span>
-            <span id="view_month" class="days"></span>
-            <span id="view_day" class="days"></span>
-        </div>
-        <div>
-            <span id="view_hour" class="hours"></span>
-            <span id="view_min" class="hours"></span>
-            <span id="view_sec" class="hours"></span>
-        </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome bot</title>
+    <link rel="stylesheet" href="../css/gh-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <h1>N予備校動くWebページコンテスト</h1>
+      <ul>
+        <li><a href="./2019summer/index.html">2019夏</a></li>
+        <li><a href="./2020summer/index.html">2020夏</a></li>
+      </ul>
     </div>
-</body>
+  </body>
 </html>
