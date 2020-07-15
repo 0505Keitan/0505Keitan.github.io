@@ -6,6 +6,8 @@ https://0505Keitan.com/app/bingo/index.html
 https://0505Keitan.com/app/kusoapp/reiwa.html
 https://0505Keitan.com/app/kusoapp/nyan.html
 
+https://0505Keitan.com/app/map/index.html
+
 https://0505Keitan.com/app/tools/arashi.html
 https://0505Keitan.com/app/tools/bunkasai.html
 https://0505Keitan.com/app/tools/countdown.html
@@ -19,5 +21,7 @@ https://0505Keitan.com/app/tools/time.html
 https://0505Keitan.com/app/voice-to-text/index.html
 https://0505Keitan.com/app/voice-to-text/vtt-kuromoji.html
 https://0505Keitan.com/app/voice-to-text/vtt.html
+
+https://0505Keitan.com/docs/welcome-bot.html
 
 https://0505Keitan.com/blog/
