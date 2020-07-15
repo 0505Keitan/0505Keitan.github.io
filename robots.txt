@@ -7,7 +7,6 @@ Disallow: /qr.html
 Disallow: /about.html
 Disallow: /CNAME
 Disallow: /cookie.html
-Disallow: /nnn/*
 Disallow: /vue/*
 Disallow: /docs/*
 Disallow: /error/*
