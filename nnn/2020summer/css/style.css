@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
 body {
   background: #F1F3CE;
   text-align: center; }
@@ -43,7 +45,10 @@ h1 {
   padding-top: 50px;
   margin-bottom: 50px;
   font-weight: 700;
-  font-size: 45px; }
+  font-size: 45px;
+  font-family: 'Noto Sans JP', sans-serif; }
+.status {
+  font-family: 'Noto Sans JP', sans-serif; }
 .btn {
   display: inline-block;
   background: #8cd460;
@@ -57,7 +62,8 @@ h1 {
   overflow: hidden;
   border: solid 2px rgba(255, 255, 255, 0.47);
   transition: .4s;
-  font-size: 25px; }
+  font-size: 25px;
+  font-family: 'Noto Sans JP', sans-serif; }
 .btn:active {
   box-shadow: 0px 0px 0px 5px #8cd460; }
 a {
@@ -68,7 +74,8 @@ a {
   color: #000;
   border-radius: 3px;
   transition: .4s;
-  font-size: 20px; }
+  font-size: 20px;
+  margin: 10px; }
 a:hover {
   color: #FFF;
   background-color: #000; }
@@ -90,4 +97,5 @@ a:hover {
   line-height: 1.3333333;
   border-radius: 6px; }
 .share {
-  margin: 40px; }
+  margin: 40px;
+  font-family: 'Noto Sans JP', sans-serif; }
