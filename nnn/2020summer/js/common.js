@@ -55,3 +55,7 @@ const omikuji = [
   "凶",
   "凶",
 ]
+
+function $(DOM) {
+  if(DOM.startsWith("#")) return document.getElementById(DOM.replace('#', ''));
+}

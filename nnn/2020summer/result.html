@@ -3,6 +3,7 @@
   <head prefix="og: http://ogp.me/ns#">
     <meta charset="UTF-8">
     <title>Webおみくじ</title>
+    <script src="./js/common.js"></script>
     <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="./css/result.css">
     <meta property="og:locale" content="ja_JP">
@@ -15,7 +16,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@0505Keitan">
     <meta name="fb:app_id" content="658561201676926">
-    <script src="./js/kekka.js"></script>
   </head>
   <body>
     <div class="title">
@@ -23,9 +23,9 @@
       <p>ルーレット式のおみくじ</p>
     </div>
     <div class="container">
-      <h2 id="result_text"></h2>
-      <div id="result" class="result"></div>
-      <div class="share">
+      <h2 id="result_text">さんの結果</h2>
+      <div class="result" id="result"></div>
+      <div class="share-btn">
         <a href="./index.html">もう一度やる！</a>
         <a id="twitter">Twitterでシェアする</a>
       </div>
