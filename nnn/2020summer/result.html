@@ -27,7 +27,29 @@
       <div class="result" id="result"></div>
       <div class="share-btn">
         <a href="./index.html">もう一度やる！</a>
-        <a id="twitter">Twitterでシェアする</a>
+        <a id="twitter">Twitterでシェア！</a>
+      </div>
+      <div class="canvas-img">
+        <h3>下の画像を保存して使ってね！</h3>
+        <canvas id="canvas" width="960" height="540">
+          <script>
+            window.onload = function(){
+              const image = new Image();
+              image.addEventListener("load",function (){
+                $("#canvas").width = image.naturalWidth;
+                $("#canvas").height = image.naturalHeight;
+                const ctx = $("#canvas").getContext("2d");
+                ctx.drawImage(image, 0, 0);
+              });
+              image.src = "./images/main.png";
+            }
+          </script>
+        </canvas>
+        <p><a onclick="$('#download').href=$('#canvas').toDataURL('image/png')" id="download" download="omikuji.png">ダウンロード</a></p>
+        <p>画像が表示されない時はリロードしてみてね！</p>
+      </div>
+      <div class="footer">
+        <p>© 2020 0505Keitan</p>
       </div>
     </div>
     <script src="./js/result.js"></script>
