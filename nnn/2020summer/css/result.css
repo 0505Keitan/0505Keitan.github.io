@@ -45,7 +45,7 @@ canvas {
   canvas {
     width: 100%; }
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 380px){
   .share-btn {
     margin: 30px 0; }
 }

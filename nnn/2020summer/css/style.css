@@ -40,7 +40,7 @@ a {
   margin-bottom: -20px; }
 .footer p {
   font-size: 15px; }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 380px){
   div {
     margin: 0; }
   .title span {

@@ -45,7 +45,7 @@
   box-shadow: 0px 0px 0px 5px #8cd460; }
 .btn:focus {
   outline-color: #dedede; }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 380px){
   .name {
     padding: 0;
     margin-bottom: 25px; }
