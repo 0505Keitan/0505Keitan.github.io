@@ -2,7 +2,7 @@ let roulette;
 let isStart = false;
 function button() {
   if(!isStart){
-    if($("#names").value.length >= 30){alert('名前は30文字以内で入力してね！');return;}
+    if($("#names").value.length >= 10){alert('名前は9文字以内で入力してね！');return;}
     $("#result").style="display:inline-block;";
     $("#name").style="display:none;";
     $("#status").innerText="STOPを押してね！";
