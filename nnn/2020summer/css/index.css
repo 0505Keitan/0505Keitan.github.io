@@ -1,7 +1,8 @@
 @import url('./style.css');
 
 .status {
-  font-family: 'Noto Sans JP', sans-serif; }
+  font-family: 'Noto Sans JP', sans-serif;
+  font-display: swap }
 #alert {
   color: #FF0000; }
 .name {
@@ -22,7 +23,8 @@
   border: 2px #00C2FC solid;
   font-size: 40px;
   font-weight: 500;
-  font-family: 'Kosugi Maru', sans-serif; }
+  font-family: 'Kosugi Maru', sans-serif;
+  font-display: swap }
 .btn {
   display: inline-block;
   background: #8cd460;
@@ -37,8 +39,9 @@
   border: solid 2px rgba(255, 255, 255, 0.47);
   transition: .4s;
   font-size: 25px;
-  font-family: 'Noto Sans JP', sans-serif; }
-.btn:active {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-display: swap }
+.btn:hover {
   box-shadow: 0px 0px 0px 5px #8cd460; }
 @media screen and (max-width: 360px){
   .name {
