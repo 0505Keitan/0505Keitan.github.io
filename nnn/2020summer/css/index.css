@@ -45,6 +45,12 @@
   box-shadow: 0px 0px 0px 5px #8cd460; }
 .btn:focus {
   outline-color: #dedede; }
+.footer p {
+  margin-top: 10px; }
+.footer a {
+  text-decoration: none;
+  color: #00aced;
+  font-size: 15px; }
 @media screen and (max-width: 380px){
   .name {
     padding: 0;
