@@ -45,8 +45,8 @@ function draw(result, name) {
 function getNow() {
   const now = new Date();
   const Y = now.getFullYear();
-  const M = now.getMonth()+1;
-  const D = now.getDate();
+  const M = ('0' + Number(now.getMonth()+1)).slice(-2);
+  const D = ('0' + now.getDate()).slice(-2);
   const h = ('0' + now.getHours()).slice(-2);
   const m = ('0' + now.getMinutes()).slice(-2);
   return `${Y}/${M}/${D} ${h}:${m}`;
