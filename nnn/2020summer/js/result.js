@@ -9,7 +9,7 @@ if(1 < window.location.search.length){
     $("#twitter").href = `https://twitter.com/intent/tweet?text=${encodeURI(`${decodeURIComponent(name[1])}さんの結果は「${decodeURIComponent(kekka[1])}」でした！\n`)}&url=https://0505Keitan.com/nnn/2020summer&hashtags=Webおみくじ`;
     setTimeout(function(){
       draw(decodeURIComponent(kekka[1]), decodeURIComponent(name[1]));
-    }, 100)
+    }, 400)
   }else{
     location.href=`index.html`
   }
