@@ -1,3 +1,4 @@
 **/.DS_Store
 app/voice-to-text/vc/*
 .sass-cache/
+node_modules
