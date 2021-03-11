@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",
-    "@nuxt/typescript-build": "^2.0.4",
+    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "node-sass": "^5.0.0",
     "push-dir": "^0.4.1",
