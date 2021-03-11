@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <title>Webおみくじ</title>
+    <script src="./js/common.js"></script>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./css/index.css">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Webでできる簡単なおみくじアプリです。">
+    <meta property="og:title" content="Webおみくじ">
+    <meta property="og:url" content="https://0505Keitan.com/nnn/2020summer/">
+    <meta property="og:image" content="https://0505Keitan.com/nnn/2020summer/images/OGP.png">
+    <meta property="og:site_title" content="Webおみくじ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@0505Keitan">
+    <meta name="fb:app_id" content="658561201676926">
+    <script src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      <span>Webおみくじ</span>
+      <p>ルーレット式のおみくじ</p>
+    </div>
+    <div class="container">
+      <h2 id="status">きみの名前を入れてね！</h2>
+      <div id="name">
+        <input class="name" type="text" placeholder="ななし" id="names">
+      </div>
+      <div class="roulette" id="result" style="display: none;"> - </div>
+      <div class="button">
+        <button type="button" id="btn" class="btn" onclick="button()">START</button>
+      </div>
+      <div class="footer">
+        <p><a href="https://github.com/0505Keitan/0505Keitan.github.io/tree/master/nnn/2020summer">GitHub</a> / <a href="https://twitter.com/0505Keitan">Twitter</a></p>
+        <p>© 2020 0505Keitan</p>
+      </div>
+    </div>
+  </body>
+</html>
