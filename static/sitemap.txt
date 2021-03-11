@@ -1,5 +1,4 @@
-https://0505Keitan.com/index.html
-https://0505Keitan.com/about.html
+https://0505Keitan.com/
 
 https://0505Keitan.com/app/bingo/index.html
 
@@ -24,4 +23,4 @@ https://0505Keitan.com/app/voice-to-text/vtt.html
 
 https://0505Keitan.com/docs/welcome-bot.html
 
-https://0505Keitan.com/blog/
+https://blog.0505Keitan.com/

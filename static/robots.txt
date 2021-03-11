@@ -2,15 +2,8 @@ User-agent: Twitterbot
 Allow: /nnn/*
 
 User-agent: *
-Disallow: /css/*
-Disallow: /images/*
-Disallow: /meishi.html
-Disallow: /qr.html
-Disallow: /about.html
 Disallow: /CNAME
-Disallow: /cookie.html
 Disallow: /nnn/*
-Disallow: /vue/*
 Disallow: /docs/*
 Disallow: /error/*
 
