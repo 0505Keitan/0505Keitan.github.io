@@ -6,7 +6,7 @@ export default {
   head: {
     title: '0505Keitan.github.io',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },

@@ -34,9 +34,9 @@ export default Vue.extend({})
   h1 {
     font-family: 'Oswald', sans-serif;
     letter-spacing: -0.01em;
-    font-size: 40px;
+    font-size: 25px;
     margin-bottom: 5px;
-    color: #008c16;
+    color: #474a54;
     text-align: left;
   }
 }

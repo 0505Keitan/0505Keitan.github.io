@@ -2,7 +2,7 @@
   <section class="section" id="top">
     <img src="/0505Keitan_v7.jpg">
     <p class="name">0505Keitan</p>
-    <p class="bio">WEB ENGINEER / High School Student</p>
+    <p class="bio">WEB ENGINEER / UNIVERSITY STUDENT</p>
   </section>
 </template>
 
