@@ -18,7 +18,7 @@
     "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.4",
     "@nuxtjs/style-resources": "^1.0.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.0",
     "push-dir": "^0.4.1",
     "sass-loader": "^10.1.1"
   }
