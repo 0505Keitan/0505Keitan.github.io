@@ -1,0 +1,62 @@
+
+
+
+
+a {
+  color: #1ca9e3;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+#about {
+  p {
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Roboto Condensed';
+    margin: 60px 0;
+  }
+}
+
+#donate {
+  i {
+    color: black;
+  }
+}
+
+
+
+.readme {
+  section {
+    padding: 10px 0;
+
+    h1 {
+      font-size: 35px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .section {
+    h1 {
+      font-size: 45px;
+    }
+  }
+
+  #about {
+    p {
+      margin: 40px 0;
+    }
+  }
+}

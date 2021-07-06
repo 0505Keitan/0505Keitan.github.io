@@ -1,0 +1,10 @@
+User-agent: Twitterbot
+Allow: /nnn/*
+
+User-agent: *
+Disallow: /CNAME
+Disallow: /nnn/*
+Disallow: /docs/*
+Disallow: /error/*
+
+Sitemap: https://0505Keitan.com/sitemap.txt

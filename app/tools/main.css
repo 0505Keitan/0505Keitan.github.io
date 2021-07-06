@@ -1,0 +1,72 @@
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    padding: 0.3rem 1rem;
+    width: calc(100% - 2rem);
+    margin: 0;
+    background: #29ad3e;
+    color: white;
+}
+
+.header p {
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+div > span {
+    font-size: 25px;
+}
+
+.hours {
+    font-size: 2em;
+    color: #c3c3c3;
+}
+
+.time {
+    font-size: 5em;
+}
+
+.day {
+    font-size: 15em;
+}
+
+.view {
+    margin: 100 0 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+.view_day {
+    font-size: 5em;
+}
+
+.view_moji {
+    font-size: 2em;
+    color: #c3c3c3;
+}
+
+.title {
+    font-size: 5em;
+}
+
+@media screen and (max-width: 860px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .view {
+        font-size: 13px;
+    }
+}

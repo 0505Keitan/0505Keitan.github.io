@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome bot</title>
+    <link rel="stylesheet" href="../css/gh-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <style>
+      body {background-color:#2C2F33;color:white;}
+      .info {color:red}
+      a {color:#7289DA}
+      .btn {display:inline-block;padding:5px 10px;text-decoration:none;color:#FFF;background-color:#7289DA;border:solid 2px #7289DA;border-radius:3px;transition:.4s;font-size:20px}
+      .btn:hover {background:#2C2F33;color:#7289DA;text-decoration:none}
+      img {width:auto}
+      .command {background:#1a1d26;;border-radius:4px;padding:2px 6px;color:#D0D0D0}
+    </style>
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <h1>Welcome bot</h1>
+      <h4>このBOTはDiscordに新規メンバーが加入すると登録しておいたメッセージを送信してくれるBOTです。β1.1</h4>
+      <p><a href="https://github.com/0505Keitan/welcome-hubot">Welcome-hubot</a>をDiscord向けにしてあります。</p>
+      <p><a href="https://discord.com/api/oauth2/authorize?client_id=728193732159078420&permissions=2048&scope=bot" class="btn"><i class="fab fa-discord"></i> 導入する</a></p>
+      <img src="../images/welcome-bot.png">
+      <h3>アップデート</h3>
+      <ul>
+        <li>2020/07/06</li>
+        <ul>
+          <li>メッセージに改行を含むことができるようになりました。</li>
+        </ul>
+        <li>2020/07/03</li>
+        <ul>
+          <li>登録したメッセージを確認できるようになりました。</li>
+          <li>ヘルプ機能を実装しました。</li>
+        </ul>
+        <li>2020/07/02</li>
+        <ul>
+          <li>メッセージを登録していない場合、「%USERNAME%さんいらっしゃい。ここは、%SERVERNAME% です。」がデフォルトになるようにしました。</li>
+          <li>β0.1を公開しました。</li>
+        </ul>
+      </ul>
+      <h3>使い方</h3>
+      <ul>
+        <li class="command">加入メッセージ登録 [MESSAGE]</li>
+        <ul>
+          <li>サーバ加入時に送信させたいメッセージを登録します。</li>
+        </ul>
+        <li class="command">加入メッセージ削除</li>
+        <ul>
+          <li>登録してある加入メッセージを削除します。</li>
+        </ul>
+        <li class="command">加入メッセージ確認</li>
+        <ul>
+          <li>登録してある加入メッセージを表示します。</li>
+        </ul>
+        <li class="command">w? help</li>
+        <ul>
+          <li>ヘルプを表示します。</li>
+        </ul>
+      </ul>
+      <h3>置き換えされるメッセージ</h3>
+      <ul>
+        <li>%USERNAME%</li>
+        <ul>
+          <li>加入ユーザにメンションされた状態に置き換えられます。</li>
+        </ul>
+        <li>%SERVERNAME%</li>
+        <ul>
+          <li>サーバ名に置き換えられます。</li>
+        </ul>
+        <li>\n</li>
+        <ul>
+          <li>改行された状態に置き換えられます。</li>
+        </ul>
+      </ul>
+      <h3>Q&A</h3>
+      <ul>
+        <li>新しい人来てもメッセージ来ないんだけど？？？</li>
+        <ul>
+          <li>下の画像のサーバのシステムのメッセージチャンネルが<span class="command">システムのメッセージはありません</span>になっている場合、新規ユーザが加入してもメッセージが投稿されません。</li>
+          <img src="../images/welcome-bot-setting.png">
+        </ul>
+        <li>とにかくメッセージが来ない！</li>
+        <ul>
+          <li>Welcome-botに上のシステムメッセージチャンネルへの送信権限がない可能性があります。上のチャンネルの設定で以下のようにしてください。</li>
+          <img src="../images/welcome-bot-channel.png">
+        </ul>
+      </ul>
+      <h3>注意</h3>
+      <p>現在進行系で開発中のため、仕様が変更になる場合があります。</p>
+      <p>不具合やバグが有りましたら<a href="https://twitter.com/0505Keitan">Twitter</a>にお願いいたします。</p>
+      <p>このBOTの利用で損害が発生したとしても、開発者は、一切責任を負いません。</p>
+    </div>
+  </body>
+</html>
