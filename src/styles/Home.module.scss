@@ -33,6 +33,31 @@
   }
 }
 
+.section {
+  h1 {
+    font-size: 25px;
+    border-bottom: 1.2px solid #004F2A;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .about {
+    letter-spacing: 0.2px;
+    line-height: 30px;
+  }
+
+  .more {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  ul, p {
+    margin: 5px 0;
+  }
+}
+
 .footer {
   background-color: #00633A;
   color: #B4CF9E;
@@ -59,25 +84,5 @@
         color: #B4CF9E;
       }
     }
-  }
-}
-
-.section {
-  h1 {
-    font-size: 25px;
-    border-bottom: 1.2px solid #004F2A;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
-  .about {
-    letter-spacing: 0.2px;
-    line-height: 30px;
-  }
-
-  ul, p {
-    margin: 5px 0;
   }
 }

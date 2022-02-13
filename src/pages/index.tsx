@@ -34,6 +34,9 @@ export default function Home() {
         <section className={styles.section}>
           <h1>Profile</h1>
           <p className={styles.about}>{about}</p>
+          <p className={styles.more}>
+            <a href='https://scrapbox.io/0505Keitan/index'>more about →</a>
+          </p>
         </section>
       </div>
 
