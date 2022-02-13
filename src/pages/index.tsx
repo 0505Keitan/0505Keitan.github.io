@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
+import Meta from '../components/meta';
 
 export default function Home() {
   const [about, setAbout] = React.useState('Loading...');
@@ -18,6 +19,7 @@ export default function Home() {
       <Head>
         <title>0505Keitan</title>
         <link rel='icon' href='/favicon.ico' />
+        <Meta description={about} />
       </Head>
 
       <main className={styles.main}>
