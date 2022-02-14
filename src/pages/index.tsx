@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/Home.module.scss';
 import Head from '../components/head';
+import dayjs from 'dayjs';
 
 type Props = {
   desc?: string;
@@ -8,6 +9,7 @@ type Props = {
 
 export default function Home({ desc }: Props) {
   const [about, setAbout] = React.useState('Loading...');
+  const [lastupdate, setUpdate] = React.useState('Loading...');
   const [favorites, setFavorite] = React.useState('Loading...');
   const [interests, setInterests] = React.useState('Loading...');
   React.useEffect(() => {
@@ -15,6 +17,13 @@ export default function Home({ desc }: Props) {
       .then((r) => r.json())
       .then((j) => {
         setAbout(j.descriptions[4]);
+        setUpdate(
+          `最終更新: ${dayjs(
+            j.descriptions[1].match(
+              /\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])/
+            )[0]
+          ).format('YYYY/MM/DD')}`
+        );
         const result: { [key: string]: Array<string> } = {
           favorite: [],
           interest: [],
@@ -104,6 +113,7 @@ export default function Home({ desc }: Props) {
             <a href='https://scrapbox.io/0505Keitan/index'>Scrapbox</a>
             &nbsp;からデータを取得しています。
           </p>
+          <p>{lastupdate}</p>
         </div>
         <nav className={styles.nav}>
           <ul className={styles.nav_list}>
