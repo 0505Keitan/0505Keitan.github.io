@@ -1,0 +1,68 @@
+body {
+    font-size: 16px;
+}
+
+.content {
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    padding: 0.3rem 1rem;
+    width: calc(100% - 2rem);
+    margin: 0;
+    background: linear-gradient(90deg, #FF0000, #FF0000, #00FF00, #00FF00, #0000FF, #0000FF, #FFFF00, #FFFF00, #7F00FF, #7F00FF);
+    color: white;
+}
+
+.header p {
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+span {
+    font-size: 25px;
+}
+
+.hours {
+    font-size: 5em;
+}
+
+.days {
+    font-size: 3em;
+}
+
+.post_btn {
+    display: inline-block;
+    padding: 4.8px 16px;
+    text-decoration: none;
+    background: #FFF;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.post_btn:hover {
+    background: #67c5ff;
+    color: white;
+}
+
+.view {
+margin: auto;
+text-align: center;
+width: 100%;
+}
+
+.keitan {
+    font-size: 3em;
+}
+
+@media screen and (max-width: 860px) {
+  body {
+width: 100%;
+}
+}
