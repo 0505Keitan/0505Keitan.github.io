@@ -1,9 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
-import Meta from '../components/meta';
+import Head from '../components/head';
 
-export default function Home() {
+type Props = {
+  desc?: string;
+};
+
+export default function Home({ desc }: Props) {
   const [about, setAbout] = React.useState('Loading...');
   const [favorite, setFavorite] = React.useState('Loading...');
   React.useEffect(() => {
@@ -16,11 +19,7 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <Head>
-        <title>0505Keitan</title>
-        <link rel='icon' href='/favicon.ico' />
-        <Meta description={about} />
-      </Head>
+      <Head description={desc} />
 
       <main className={styles.main}>
         <section>
@@ -74,16 +73,14 @@ export default function Home() {
   );
 }
 
-/*
-const url = '';
 export async function getStaticProps() {
-  const json = await fetch(url).then((r) => r.json());
-  console.log(json);
-  const a = json.b;
+  const json = await fetch(
+    'https://scrapbox.io/api/pages/0505Keitan/index'
+  ).then((r) => r.json());
+  const desc = json.descriptions[4];
   return {
     props: {
-      a,
+      desc,
     },
   };
 }
-*/
