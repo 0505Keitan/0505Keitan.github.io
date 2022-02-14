@@ -51,7 +51,7 @@ export default function Home({ desc }: Props) {
           <img src='/0505Keitan_v7.jpg' />
           <p className={styles.name}>0505Keitan</p>
           <p className={styles.bio}>
-            WEB ENGINEER / CREATOR / UNIVERSITY STUDENT
+            WEB ENGINEER / MOVIE CREATOR / UNIVERSITY STUDENT
           </p>
         </section>
       </main>
