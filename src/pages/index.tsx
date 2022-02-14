@@ -57,7 +57,14 @@ export default function Home({ desc }: Props) {
       </div>
 
       <footer className={styles.footer}>
-        <span>0505Keitan</span>
+        <div className={styles.footer_left}>
+          <span>0505Keitan</span>
+          <p>
+            このサイトは&nbsp;
+            <a href='https://scrapbox.io/0505Keitan/index'>Scrapbox</a>
+            &nbsp;からデータを取得しています。
+          </p>
+        </div>
         <nav className={styles.nav}>
           <ul className={styles.nav_list}>
             <li>

@@ -66,8 +66,15 @@
   padding: 10px;
   font-size: 30px;
 
-  span {
+  .footer_left {
     float: left;
+    p {
+      margin: 0;
+      font-size: 15px;
+    }
+    a {
+      color: #a2d678;
+    }
   }
 
   .nav_list {
