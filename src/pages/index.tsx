@@ -8,13 +8,38 @@ type Props = {
 
 export default function Home({ desc }: Props) {
   const [about, setAbout] = React.useState('Loading...');
-  const [favorite, setFavorite] = React.useState('Loading...');
+  const [favorites, setFavorite] = React.useState('Loading...');
+  const [interests, setInterests] = React.useState('Loading...');
   React.useEffect(() => {
     fetch('/api/scrapbox')
       .then((r) => r.json())
       .then((j) => {
         setAbout(j.descriptions[4]);
-        setFavorite(j.lines[8].text);
+        const result: { [key: string]: Array<string> } = {
+          favorite: [],
+          interest: [],
+        };
+        let isFav: boolean = false;
+        let isInt: boolean = false;
+        for (const i of j.lines) {
+          switch (i.text) {
+            case '[*** <好きなもの(こと)>]':
+              isFav = true;
+              continue;
+            case '[*** <興味>]':
+              isInt = true;
+              continue;
+          }
+
+          if (i.text === '') {
+            isFav = false;
+            isInt = false;
+          }
+          if (isFav) result.favorite.push(i.text);
+          if (isInt) result.interest.push(i.text);
+        }
+        setFavorite(result.favorite.join(','));
+        setInterests(result.interest.join(','));
       });
   }, []);
   return (
@@ -45,7 +70,22 @@ export default function Home({ desc }: Props) {
         <section className={styles.section}>
           <h1>Favorite</h1>
           <ul>
-            {favorite.split(',').map((i) => {
+            {favorites.split(',').map((f) => {
+              return (
+                <li key={f}>
+                  <p>{f}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      </div>
+
+      <div className={styles.container}>
+        <section className={styles.section}>
+          <h1>Interest</h1>
+          <ul>
+            {interests.split(',').map((i) => {
               return (
                 <li key={i}>
                   <p>{i}</p>
