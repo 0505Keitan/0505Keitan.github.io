@@ -12,6 +12,8 @@ export default function Home({ desc }: Props) {
   const [lastupdate, setUpdate] = React.useState('Loading...');
   const [favorites, setFavorite] = React.useState('Loading...');
   const [interests, setInterests] = React.useState('Loading...');
+  const [awards, setAwards] = React.useState('Loading...');
+  const [speakers, setSpeakers] = React.useState('Loading...');
   React.useEffect(() => {
     fetch('/api/scrapbox')
       .then((r) => r.json())
@@ -27,9 +29,13 @@ export default function Home({ desc }: Props) {
         const result: { [key: string]: Array<string> } = {
           favorite: [],
           interest: [],
+          award: [],
+          speaker: [],
         };
         let isFav: boolean = false;
         let isInt: boolean = false;
+        let isAwd: boolean = false;
+        let isSpk: boolean = false;
         for (const i of j.lines) {
           switch (i.text) {
             case '[*** <好きなもの(こと)>]':
@@ -38,17 +44,35 @@ export default function Home({ desc }: Props) {
             case '[*** <興味>]':
               isInt = true;
               continue;
+            case '[*** <受賞>]':
+              isAwd = true;
+              continue;
+            case '[*** <登壇>]':
+              isSpk = true;
+              continue;
           }
 
           if (i.text === '') {
             isFav = false;
             isInt = false;
+            isAwd = false;
+            isSpk = false;
           }
           if (isFav) result.favorite.push(i.text);
           if (isInt) result.interest.push(i.text);
+          if (isAwd) {
+            if (i.text.startsWith('  ')) {
+              result.award.push(`<ul><li>${i.text}</li></ul>`);
+            } else {
+              result.award.push(`<li>${i.text}</li>`);
+            }
+          }
+          if (isSpk) result.speaker.push(i.text);
         }
         setFavorite(result.favorite.join(','));
         setInterests(result.interest.join(','));
+        setAwards(result.award.join(','));
+        setSpeakers(result.speaker.join(','));
       });
   }, []);
   return (
@@ -98,6 +122,32 @@ export default function Home({ desc }: Props) {
               return (
                 <li key={i}>
                   <p>{i}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      </div>
+
+      <div className={styles.container}>
+        <section className={styles.section}>
+          <h1>Award</h1>
+          <ul>
+            {awards.split(',').map((a) => {
+              return <span key={a} dangerouslySetInnerHTML={{ __html: a }} />;
+            })}
+          </ul>
+        </section>
+      </div>
+
+      <div className={styles.container}>
+        <section className={styles.section}>
+          <h1>Speaker</h1>
+          <ul>
+            {speakers.split(',').map((s) => {
+              return (
+                <li key={s}>
+                  <p>{s}</p>
                 </li>
               );
             })}
