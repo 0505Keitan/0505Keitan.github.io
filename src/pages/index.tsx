@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/Home.module.scss';
 import Head from '../components/head';
+import dayjs from 'dayjs';
 
 type Props = {
   desc?: string;
@@ -8,19 +9,33 @@ type Props = {
 
 export default function Home({ desc }: Props) {
   const [about, setAbout] = React.useState('Loading...');
+  const [lastupdate, setUpdate] = React.useState('Loading...');
   const [favorites, setFavorite] = React.useState('Loading...');
   const [interests, setInterests] = React.useState('Loading...');
+  const [awards, setAwards] = React.useState('Loading...');
+  const [speakers, setSpeakers] = React.useState('Loading...');
   React.useEffect(() => {
     fetch('/api/scrapbox')
       .then((r) => r.json())
       .then((j) => {
         setAbout(j.descriptions[4]);
+        setUpdate(
+          `最終更新: ${dayjs(
+            j.descriptions[1].match(
+              /\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])/
+            )[0]
+          ).format('YYYY/MM/DD')}`
+        );
         const result: { [key: string]: Array<string> } = {
           favorite: [],
           interest: [],
+          award: [],
+          speaker: [],
         };
         let isFav: boolean = false;
         let isInt: boolean = false;
+        let isAwd: boolean = false;
+        let isSpk: boolean = false;
         for (const i of j.lines) {
           switch (i.text) {
             case '[*** <好きなもの(こと)>]':
@@ -29,17 +44,35 @@ export default function Home({ desc }: Props) {
             case '[*** <興味>]':
               isInt = true;
               continue;
+            case '[*** <受賞>]':
+              isAwd = true;
+              continue;
+            case '[*** <登壇>]':
+              isSpk = true;
+              continue;
           }
 
           if (i.text === '') {
             isFav = false;
             isInt = false;
+            isAwd = false;
+            isSpk = false;
           }
           if (isFav) result.favorite.push(i.text);
           if (isInt) result.interest.push(i.text);
+          if (isAwd) {
+            if (i.text.startsWith('  ')) {
+              result.award.push(`<ul><li>${i.text}</li></ul>`);
+            } else {
+              result.award.push(`<li>${i.text}</li>`);
+            }
+          }
+          if (isSpk) result.speaker.push(i.text);
         }
         setFavorite(result.favorite.join(','));
         setInterests(result.interest.join(','));
+        setAwards(result.award.join(','));
+        setSpeakers(result.speaker.join(','));
       });
   }, []);
   return (
@@ -51,7 +84,7 @@ export default function Home({ desc }: Props) {
           <img src='/0505Keitan_v7.jpg' />
           <p className={styles.name}>0505Keitan</p>
           <p className={styles.bio}>
-            WEB ENGINEER / CREATOR / UNIVERSITY STUDENT
+            WEB ENGINEER / MOVIE CREATOR / UNIVERSITY STUDENT
           </p>
         </section>
       </main>
@@ -96,6 +129,32 @@ export default function Home({ desc }: Props) {
         </section>
       </div>
 
+      <div className={styles.container}>
+        <section className={styles.section}>
+          <h1>Award</h1>
+          <ul>
+            {awards.split(',').map((a) => {
+              return <span key={a} dangerouslySetInnerHTML={{ __html: a }} />;
+            })}
+          </ul>
+        </section>
+      </div>
+
+      <div className={styles.container}>
+        <section className={styles.section}>
+          <h1>Speaker</h1>
+          <ul>
+            {speakers.split(',').map((s) => {
+              return (
+                <li key={s}>
+                  <p>{s}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      </div>
+
       <footer className={styles.footer}>
         <div className={styles.footer_left}>
           <span>0505Keitan</span>
@@ -104,6 +163,7 @@ export default function Home({ desc }: Props) {
             <a href='https://scrapbox.io/0505Keitan/index'>Scrapbox</a>
             &nbsp;からデータを取得しています。
           </p>
+          <p>{lastupdate}</p>
         </div>
         <nav className={styles.nav}>
           <ul className={styles.nav_list}>
