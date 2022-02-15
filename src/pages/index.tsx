@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.scss';
 import Head from '../components/head';
 import dayjs from 'dayjs';
@@ -8,13 +8,13 @@ type Props = {
 };
 
 export default function Home({ desc }: Props) {
-  const [about, setAbout] = React.useState('Loading...');
-  const [lastupdate, setUpdate] = React.useState('Loading...');
-  const [favorites, setFavorite] = React.useState('Loading...');
-  const [interests, setInterests] = React.useState('Loading...');
-  const [awards, setAwards] = React.useState('Loading...');
-  const [speakers, setSpeakers] = React.useState('Loading...');
-  React.useEffect(() => {
+  const [about, setAbout] = useState('Loading...');
+  const [lastupdate, setUpdate] = useState('Loading...');
+  const [favorites, setFavorite] = useState('Loading...');
+  const [interests, setInterests] = useState('Loading...');
+  const [awards, setAwards] = useState('Loading...');
+  const [speakers, setSpeakers] = useState('Loading...');
+  useEffect(() => {
     fetch('/api/scrapbox')
       .then((r) => r.json())
       .then((j) => {
